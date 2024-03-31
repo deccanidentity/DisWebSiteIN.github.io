@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
 		interval: 4000,
 	});
 // fancybox
-  //  $(".fancybox").fancybox();
+ $(".fancybox").fancybox();
 //isotope
     if ($('.isotopeWrapper').length) {
         var $container = $('.isotopeWrapper');
