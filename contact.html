@@ -19,6 +19,53 @@
 	<script src="js/html5shiv.js"></script>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+		main {
+		     display: flex;
+		     flex-wrap: wrap;
+		     gap: 2rem;
+		     padding: 2rem;
+		     max-width: 1200px;
+		     margin: auto;
+		   }
+		   form {
+		     flex: 1;
+		     background: #fff;
+		     padding: 2rem;
+		     border-radius: 10px;
+		     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+		     display: flex;
+		     flex-direction: column;
+		     gap: 1rem;
+		   }
+		   input, textarea, button {
+		     width: 100%;
+		     padding: 0.8rem;
+		     border-radius: 5px;
+		     border: 1px solid #ccc;
+		     font-size: 1rem;
+		   }
+		   input:focus, textarea:focus {
+		     outline: none;
+		     border-color: #007bff;
+		     box-shadow: 0 0 4px rgba(0,123,255,0.4);
+		   }
+		   button {
+		     background: #007bff;
+		     color: white;
+		     border: none;
+		     cursor: pointer;
+		     font-size: 1.1rem;
+		     transition: background 0.3s ease;
+			 width: 100px;
+		   }
+		   button:hover {
+		     background: #0056b3;
+		   }
+		@media (max-width: 600px) {
+		      main { flex-direction: column; }
+		    }
+	</style>
 </head>
 
 <body>
@@ -57,42 +104,20 @@
 					<h1 class="page-title">Contact us</h1>
 				</header>
 				
-				<p>Contact us via <label style="color:gray; font-weight:bold;">Google Forms</label> by clicking <a href="https://forms.gle/qfpiPVHPdtpTgWwP7" target="_blank" style="color:purple;font-weight:bold;"><u> here.</u></a> &nbsp; 
+				<p>Contact us via <label style="color:purple; font-weight:bold;">Google Forms</label> by clicking <a href="https://forms.gle/qfpiPVHPdtpTgWwP7" target="_blank" style="color:purple;font-weight:bold;"><u> here.</u></a> &nbsp; 
 				Chat us via <label style="color:green; font-weight:bold;">WhatsApp</label> by clicking &nbsp;<a href="https://wa.me/message/IEJ3MUBFNFSEA1" data-placement="top" title="WhatsApp" target="_blank" >
 				<i class="fa_social fa fa-whatsapp"  aria-hidden="true" style="font-size:18px;color:green" ></i></a> </p>
 				
 				<p>
-					We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
-				</p>
+					Every successful partnership begins with a conversation. Please share the details of your <b>Query (?)</b> using the form below, and our team will get back to you within 1-2 business days.
 				<br>
-					<form>
-						<div class="row">
-							<div class="col-sm-12">
-								<input class="form-control" type="text" placeholder="Name"><br/>
-							</div>
-							<div class="col-sm-12">
-								<input class="form-control" type="text" placeholder="Email ID"><br/>
-							</div>
-							<div class="col-sm-12">
-								<input class="form-control" type="text" placeholder="Phone No."><br/>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-sm-6">
-								<input class="btn btn-action pull-left" type="submit" value="Send message">
-							</div>
-							<div class="col-sm-6 text-right">
-								
-							</div>
-						</div>
-					</form>
-
+				<form id="contactForm">
+				      <input type="text" name="name" placeholder="Full Name" required />
+				      <input type="email" name="email" placeholder="Email Id " required />
+					  <input type="number" name="mobile" placeholder="+91 Phone Number" required />
+				      <textarea name="message" placeholder="Type your message.." rows="5" required></textarea>
+				      <button type="submit">Send Message</button>
+			    </form>		
 			</article>
 			<!-- /Article -->
 			
@@ -100,14 +125,28 @@
 			<aside class="col-sm-3 sidebar sidebar-right">
 
 				<div class="panel contact">
-					<h4>&nbsp;Office Address</h4>
+					<h4>&nbsp;<b>Registred Office Address</b></h4>
+					<hr>
 					<ul>
+						  <li><i class="fa fa-building"></i> Deccan IDentity Software Pvt.Ltd. Adibatla, Hyderabad, Telangana, 501510, India <img src="images/india.png" /></li>
+
 						  <li><i class="fa fa-phone"></i> +91 90000 35869 &nbsp;<a href="https://wa.me/message/IEJ3MUBFNFSEA1" data-placement="top" title="WhatsApp" target="_blank" ><i
 						        class="fa_social fa fa-whatsapp"  aria-hidden="true" style="font-size:18px;color:green" ></i></a>
 						  </li>
-                          <li><a href="#"><i class="fa fa-envelope-o"></i> &nbsp;hr@deccanidentity.com</a></li>
-              			  <li><i class="fa fa-building"></i> Deccan IDentity Software Pvt.Ltd. Adibatla, Hyderabad, Telangana, 501510, India <img src="images/india.png" /></li>
+                          <li><a href="#"><i class="fa fa-envelope-o"></i> &nbsp;info@deccanidentity.com</a></li>
 				   </ul> 
+				   <br>
+				   <br>
+				   <h4>&nbsp;<b>Branch Office</b></h4>
+   					<hr>
+   					<ul>
+						  <li><i class="fa fa-building"></i> Deccan IDentity Software Pvt.Ltd. <br>2nd Floor, Gupta's midtown, Guntur Rd, Gopal Nagar, Ongole, Andhra Prades, 523001, India <img src="images/india.png" /></li>
+
+   						  <li><i class="fa fa-phone"></i> +91 90000 35869 &nbsp;<a href="https://wa.me/message/IEJ3MUBFNFSEA1" data-placement="top" title="WhatsApp" target="_blank" ><i
+   						        class="fa_social fa fa-whatsapp"  aria-hidden="true" style="font-size:18px;color:green" ></i></a>
+   						  </li>
+                          <li><a href="#"><i class="fa fa-envelope-o"></i> &nbsp;info@deccanidentity.com</a></li>
+   				   </ul> 
 				</div>
 
 			</aside>
@@ -207,7 +246,7 @@
         </div>
         <div class="col-md-6 panel">
           <div class="panel-body">
-            <p class="text-right"> Copyright &copy; 2024 All Rights Reserved. By<a href="http://deccanidentity.com/" target="_blank">DeccanIDentity`</a></p>
+            <p class="text-right"> Copyright &copy; 2025 All Rights Reserved. By<a href="http://deccanidentity.com/" target="_blank">DeccanIDentity`</a></p>
           </div>
         </div>
       </div>
