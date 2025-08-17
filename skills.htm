@@ -16,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="css/da-slider.css" />
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/deccan-identity.css">
+<link rel="stylesheet" href="css/form-popup.css">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -85,7 +86,7 @@
 					      <h3><label style="color:black;">Ping</label><label style="color:#cd2a2a;">Federate</label></h3>
 					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
 					      <p style="font-size: 12px;color: blue;font-weight: bold;">60 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://forms.gle/UqV9ktmevuk2ztoF6" target="_blank" style="font-size: 12px;color: white;">Register</a></button>
+					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')">📩Register</button>
 					    </div>
 					  </div>
 				</div>
@@ -146,7 +147,7 @@
 				 <div class="flip-card">
 					<div class="flip-card-inner">
 					  <div class="flip-card-front">
-					    <img src="images/offers/Okta.png" height="200" alt="Okta" />
+					    <img src="images/offers/okta.png" height="200" alt="Okta" />
 					    </div>
 					    <div class="flip-card-back">					      
 					      
@@ -594,6 +595,22 @@
 			</div>
 		</div>
 	</footer>
+	
+	<!-- Popup -->
+	 <div id="popup" class="popup">
+	   <div class="popup-content">
+	     <button class="close-btn" onclick="closePopup()">✖</button>
+	     <h3>📩 Get in Touch</h3>
+	     <form id="googleForm" class="open-popup-form">
+	       <input type="text" name="name" id="name" placeholder="Full Name" required class="open-popup-input"/>
+	       <input type="email" name="email" id="email" placeholder="Email Id" required  class="open-popup-input" />
+	       <input type="number" name="mobile" id="mobile" placeholder="+91 Phone Number" required class="open-popup-input" />
+	       <textarea name="message" id="message" placeholder="Type your message.." rows="5" required class="open-popup-textarea"></textarea>
+	       <button type="submit" id="submitButton" class="open-popup-button">Send Message</button>
+	       <div class="formstatus" id="formstatus"></div>
+	     </form>
+	   </div>
+	 </div>
 
 <!-- JavaScript libs are placed at the end of the document so the pages load faster --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -603,6 +620,7 @@
 <script src="js/headroom.min.js"></script> 
 <script src="js/jquery.headroom.min.js"></script> 
 <script src="js/custom.js"></script>
+<script src="js/form-popup.js"></script> 
 	
 </body>
 </html>
