@@ -981,3 +981,11 @@ h1, h2, h3, h4 {
   font-size: 28px;
   margin-bottom: 10px;
 }
+
+.logo-text {
+  transition: all 0.3s ease;
+}
+
+.logo-text:hover {
+  box-shadow: 0px 1px 0px 0px white; /* white box offset */
+}
