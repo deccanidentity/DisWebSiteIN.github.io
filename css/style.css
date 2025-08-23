@@ -220,7 +220,7 @@ z-index: 9999;
 	padding: 0px 10px;
 }
 .jumbotron {
-	background-color: #748486;
+	background-color: rgb(19 82 93);
 }
 .page-title {
 	margin-top: 20px;
@@ -663,13 +663,13 @@ nav#filter a.current {
 
 /* Header (Navbar) Gradient */
 .navbar-inverse {
-    background: rgb(194, 205, 207);
+    background:rgb(19 82 93);
     border: none;
 }
 
 /* Navbar Text */
 .navbar-inverse .navbar-nav > li > a {
-    color: rgb(1, 94, 110);
+    color: white;
     font-weight: 600;
     letter-spacing: 0.5px;
     transition: background 0.3s, color 0.3s;
@@ -694,7 +694,7 @@ nav#filter a.current {
     color: #fff;
 }
 .footer2 {
-    background: rgb(109, 114, 116);
+    background: rgb(19 82 93);
     color: #fff;
 }
 .footer1 a, .footer2 a {
@@ -713,7 +713,7 @@ body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 h1, h2, h3, h4 {
-    color: #44bfe8;
+    color: rgb(19 82 93);
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
