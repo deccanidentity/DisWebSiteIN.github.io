@@ -95,7 +95,13 @@ footer {
     font-size: 1.1em !important;
     word-break: break-word;
   }
-  img {
+  .navbar-inverse .navbar-header > img {
+    margin-left: 10px;
+    float: left;
+    max-width: 70%;
+    height: auto;
+  }
+    .img {
     max-width: 100% !important;
     height: auto !important;
   }
@@ -108,6 +114,23 @@ footer {
     margin-right: 0 !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
+  }
+  .timeline{
+    width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .flip-card {
+    margin: 15px 15px;
+    width: 40%;
+    float: left;
+  }
+  .flip-card-inner {
+    margin: 0 auto;
+    font-size: 14px;
+    button {
+      font-size: 10px;
+    }
   }
 }
 
