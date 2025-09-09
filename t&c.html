@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms & Conditions Popup</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="modal-overlay" id="termsModal">
+  <div class="modal">
+  <div class="modal-header">
+    <h2 id="modalTitle">Terms & Conditions</h2>
+    <button class="decline-btn" id="declineBtn" title="Decline">✖</button>
+  </div>
+    <div class="modal-content">
+      <p>Welcome to the official website of <strong>Deccan Identity Software Limited</strong> (“Deccan Identity”). These Terms & Conditions govern your use of our website (<a href="https://www.deccanidentity.com">www.deccanidentity.com</a>) and related services.</p>
+      
+      <h3>1. Use of Website</h3>
+      <p>You agree to use this website only for lawful purposes and not to interfere with others’ use.</p>
+
+      <h3>2. Intellectual Property</h3>
+      <p>All content is the property of Deccan Identity and protected by copyright and trademark laws.</p>
+
+      <h3>3. Disclaimer</h3>
+      <p>Content is for general information. No warranties are provided regarding accuracy.</p>
+
+      <h3>4. Limitation of Liability</h3>
+      <p>Deccan Identity is not liable for any damages arising from use of this site.</p>
+
+      <h3>5. Governing Law</h3>
+      <p>These Terms shall be governed by the laws of India. Disputes fall under Hyderabad jurisdiction.</p>
+    </div>
+
+    <div class="modal-footer">
+      <label>
+        <input type="checkbox" id="agreeCheck"> I agree to the Terms & Conditions @ Deccan Identity Software Private Limited
+      </label>
+      <button id="submitBtn" disabled>Submit</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const agreeCheck = document.getElementById("agreeCheck");
+  const submitBtn = document.getElementById("submitBtn");
+  const declineBtn = document.getElementById("declineBtn");
+
+
+  // Enable button only if checkbox is ticked
+  agreeCheck.addEventListener("change", () => {
+    submitBtn.disabled = !agreeCheck.checked;
+  });
+
+  // Redirect back to previous page
+  submitBtn.addEventListener("click", () => {
+    window.history.back();
+  });
+
+  declineBtn.addEventListener("click", () => {
+    window.history.back();
+  });
+</script>
+
+</body>
+</html>
