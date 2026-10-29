@@ -1,78 +1,1673 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy Popup</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | DeccanIDentity Software Pvt. Ltd.</title>
+  <meta name="description" content="Official Privacy Policy of DeccanIDentity Software Pvt. Ltd. Learn how we collect, protect, process, and respect your personal data under Zero-Trust cybersecurity and global compliance standards.">
+  <link rel="canonical" href="https://deccanidentity.com/privacy.htm">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/modern.css?v=2.9">
+  
+  <style>
+    /* Dedicated Legal Page Styles */
+    .legal-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+    .legal-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 0.85rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      backdrop-filter: blur(8px);
+    }
+    .legal-badge-pill i {
+      color: var(--accent-cyan);
+    }
+
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 2.25rem;
+      align-items: flex-start;
+      margin-top: -1.5rem;
+    }
+
+    /* Sidebar / Sticky TOC */
+    .legal-sidebar {
+      position: sticky;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .legal-toc-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .legal-toc-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: default;
+      list-style: none;
+      outline: none;
+      user-select: none;
+    }
+    .legal-toc-summary::-webkit-details-marker {
+      display: none;
+    }
+    .toc-badge-count {
+      display: none;
+    }
+    .toc-expand-icon {
+      display: none;
+    }
+    .legal-toc-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .legal-toc-title i {
+      color: var(--primary);
+    }
+    .legal-toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      max-height: 52vh;
+      overflow-y: auto;
+      padding-right: 0.35rem;
+    }
+    .legal-toc-list::-webkit-scrollbar {
+      width: 4px;
+    }
+    .legal-toc-list::-webkit-scrollbar-thumb {
+      background: var(--border-medium);
+      border-radius: var(--radius-full);
+    }
+    .legal-toc-link {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.86rem;
+      color: var(--text-body);
+      text-decoration: none;
+      padding: 0.45rem 0.65rem;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      line-height: 1.35;
+    }
+    .legal-toc-link:hover,
+    .legal-toc-link.active {
+      color: var(--primary);
+      background: var(--primary-light);
+      font-weight: 600;
+      transform: translateX(3px);
+    }
+    .legal-toc-link .toc-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      min-width: 1.3rem;
+    }
+    .legal-toc-link:hover .toc-num,
+    .legal-toc-link.active .toc-num {
+      color: var(--primary);
+    }
+
+    /* Enhanced Document Actions & Buttons */
+    .legal-doc-header-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .legal-switch-tabs {
+      display: inline-flex;
+      align-items: center;
+      background: #f1f5f9;
+      padding: 0.3rem;
+      border-radius: var(--radius-full);
+      gap: 0.35rem;
+      border: 1px solid var(--border-subtle);
+    }
+    .legal-tab-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      text-decoration: none !important;
+      transition: var(--transition);
+      color: var(--text-muted);
+    }
+    .legal-tab-pill.active {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+    }
+    .legal-tab-pill:not(.active):hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Document Status & Version Badge */
+    .legal-doc-header-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .legal-doc-meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      background: #f8fafc;
+      padding: 0.45rem 0.95rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+    }
+    .text-emerald {
+      color: #10b981;
+    }
+
+    /* Print / Save PDF Button */
+    .btn-legal-print {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.65rem 1.25rem;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #ffffff !important;
+      background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none !important;
+      white-space: nowrap;
+    }
+    .btn-legal-print:hover {
+      background: linear-gradient(135deg, #1e40af 0%, #0369a1 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(37, 99, 235, 0.38);
+    }
+    .btn-legal-print:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Switch Document Link Button */
+    .btn-legal-switch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.65rem 1.25rem;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main) !important;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      box-shadow: var(--shadow-xs);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none !important;
+      white-space: nowrap;
+    }
+    .btn-legal-switch:hover {
+      background: #f8fafc;
+      border-color: var(--primary);
+      color: var(--primary) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+    }
+    .btn-legal-switch .arrow-icon {
+      font-size: 0.75rem;
+      transition: transform 0.2s ease;
+      margin-left: auto;
+    }
+    .btn-legal-switch:hover .arrow-icon {
+      transform: translateX(3px);
+    }
+
+    /* Return to Home Button */
+    .btn-legal-home {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.15rem;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155 !important;
+      background: #f1f5f9;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none !important;
+      white-space: nowrap;
+    }
+    .btn-legal-home:hover {
+      background: #e2e8f0;
+      color: var(--text-main) !important;
+      transform: translateY(-2px);
+    }
+
+    .btn-legal-sm {
+      padding: 0.48rem 0.95rem;
+      font-size: 0.82rem;
+    }
+
+    /* Sidebar Document Card Enhancement */
+    .legal-sidebar-card {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.75rem;
+    }
+    .sidebar-btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Bottom Document Actions Bar */
+    .legal-doc-footer-actions {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .doc-meta-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .doc-meta-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .legal-sidebar-card h5 {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .legal-sidebar-card p {
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* Main Legal Content */
+    .legal-main {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 2.75rem 3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Highlights Banner */
+    .legal-highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .legal-highlight-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.25rem;
+      transition: var(--transition);
+    }
+    .legal-highlight-box:hover {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+    .legal-highlight-box .hl-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-light);
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      font-size: 1.05rem;
+    }
+    .legal-highlight-box h4 {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+    .legal-highlight-box p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    /* Legal Section */
+    .legal-section {
+      padding-top: 1.85rem;
+      margin-bottom: 2.25rem;
+      border-top: 1px solid var(--border-subtle);
+      scroll-margin-top: 110px;
+    }
+    .legal-section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+    .legal-section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .section-badge-num {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-full);
+      background: var(--primary-light);
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.88rem;
+      flex-shrink: 0;
+    }
+    .legal-section h2 {
+      font-size: 1.35rem;
+      color: var(--text-main);
+      margin: 0;
+      font-weight: 700;
+    }
+    .legal-section h3 {
+      font-size: 1.08rem;
+      color: var(--text-main);
+      margin: 1.35rem 0 0.65rem;
+      font-weight: 600;
+    }
+    .legal-section p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-body);
+      margin-bottom: 0.95rem;
+    }
+    .legal-section ul {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      color: var(--text-body);
+      font-size: 0.95rem;
+      line-height: 1.68;
+    }
+    .legal-section li {
+      margin-bottom: 0.45rem;
+    }
+
+    /* Callout Card */
+    .legal-callout {
+      background: #f0fdf4;
+      border-left: 4px solid var(--accent-emerald);
+      padding: 1.15rem 1.35rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1.35rem 0;
+      font-size: 0.92rem;
+      color: #14532d;
+      line-height: 1.6;
+    }
+    .legal-callout.info {
+      background: #eff6ff;
+      border-left-color: var(--primary);
+      color: #1e3a8a;
+    }
+    .legal-callout strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    /* Structured Legal Table */
+    .legal-table-wrap {
+      overflow-x: auto;
+      margin: 1.25rem 0 1.5rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    .legal-table th {
+      background: #f8fafc;
+      padding: 0.85rem 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .legal-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-body);
+      vertical-align: top;
+    }
+    .legal-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Grievance Box */
+    .grievance-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+    .grievance-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .grievance-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .grievance-item div strong {
+      display: block;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+    .grievance-item div p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       Comprehensive Responsive Breakpoints (Desktop, Laptop, Tablet, Mobile)
+       ========================================================================== */
+    
+    /* Laptop & Small Desktop (992px to 1239px) */
+    @media (min-width: 992px) and (max-width: 1239px) {
+      .legal-layout {
+        grid-template-columns: 260px 1fr;
+        gap: 1.5rem;
+      }
+      .legal-main {
+        padding: 2.25rem 2rem;
+      }
+      .legal-highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Tablet & Medium Screens (768px to 991px) */
+    @media (max-width: 991px) {
+      .legal-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .legal-sidebar {
+        position: static;
+        order: 1;
+      }
+      .legal-main {
+        padding: 2rem 1.75rem;
+        order: 2;
+      }
+      .legal-toc-summary {
+        cursor: pointer;
+        padding: 0.15rem 0;
+      }
+      .legal-toc-summary .legal-toc-title {
+        margin-bottom: 0;
+      }
+      .toc-badge-count {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--primary);
+        background: var(--primary-light);
+        padding: 0.2rem 0.55rem;
+        border-radius: var(--radius-full);
+        margin-left: auto;
+        margin-right: 0.65rem;
+      }
+      .toc-expand-icon {
+        display: block;
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        transition: transform 0.25s ease;
+      }
+      .legal-toc-accordion[open] .toc-expand-icon {
+        transform: rotate(180deg);
+        color: var(--primary);
+      }
+      .legal-toc-accordion[open] .legal-toc-list {
+        margin-top: 1rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--border-subtle);
+      }
+      .legal-toc-list {
+        max-height: 42vh;
+      }
+      .legal-highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+      }
+      .legal-sidebar-card .sidebar-btn-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+      }
+    }
+
+    /* Mobile Devices (<= 767px) */
+    @media (max-width: 767px) {
+      .page-hero {
+        padding: 2.5rem 0 2rem;
+      }
+      .legal-hero-badges {
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      .legal-badge-pill {
+        font-size: 0.76rem;
+        padding: 0.3rem 0.65rem;
+      }
+      .legal-layout {
+        margin-top: -1rem;
+        gap: 1.25rem;
+      }
+      .legal-main {
+        padding: 1.5rem 1.15rem;
+        border-radius: var(--radius-lg);
+      }
+      .legal-doc-header-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
+      }
+      .legal-switch-tabs {
+        width: 100%;
+        display: flex;
+      }
+      .legal-tab-pill {
+        flex: 1;
+        justify-content: center;
+        padding: 0.5rem 0.4rem;
+        font-size: 0.8rem;
+      }
+      .legal-doc-header-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.6rem;
+      }
+      .legal-doc-meta-badge {
+        justify-content: center;
+        width: 100%;
+      }
+      .legal-doc-header-right .btn-legal-print {
+        width: 100%;
+        justify-content: center;
+      }
+      .btn-legal-print {
+        width: 100%;
+        justify-content: center;
+        padding: 0.65rem 1rem;
+      }
+      .legal-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+      .legal-highlight-box {
+        padding: 1rem;
+      }
+      .legal-section {
+        padding-top: 1.5rem;
+        margin-bottom: 1.75rem;
+        scroll-margin-top: 80px;
+      }
+      .legal-section-header {
+        gap: 0.6rem;
+      }
+      .section-badge-num {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+      }
+      .legal-section h2 {
+        font-size: 1.2rem;
+        line-height: 1.35;
+      }
+      .legal-section h3 {
+        font-size: 1rem;
+      }
+      .legal-section p,
+      .legal-section ul {
+        font-size: 0.9rem;
+        line-height: 1.62;
+      }
+      .legal-section ul {
+        margin-left: 1rem;
+      }
+      .grievance-box {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+        gap: 1rem;
+      }
+      .legal-doc-footer-actions {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 0.85rem;
+      }
+      .doc-meta-info {
+        justify-content: center;
+      }
+      .doc-meta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+      .doc-meta-buttons .btn-legal-print,
+      .doc-meta-buttons .btn-legal-switch,
+      .doc-meta-buttons .btn-legal-home {
+        width: 100%;
+        justify-content: center;
+      }
+      .legal-sidebar-card .sidebar-btn-group {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Small Smartphone Screens (<= 480px down to 320px) */
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.85rem !important;
+      }
+      .legal-main {
+        padding: 1.25rem 0.85rem;
+        border-radius: var(--radius-md);
+      }
+      .legal-callout {
+        padding: 0.9rem 1rem;
+        font-size: 0.86rem;
+      }
+      .legal-table th,
+      .legal-table td {
+        padding: 0.65rem 0.75rem;
+        font-size: 0.8rem;
+      }
+      .btn-legal-switch,
+      .btn-legal-print,
+      .btn-legal-home {
+        font-size: 0.82rem;
+        padding: 0.55rem 0.85rem;
+      }
+    }
+    @media print {
+      .site-header,
+      .page-hero,
+      .legal-sidebar,
+      .site-footer,
+      .floating-actions,
+      .site-scroll-progress {
+        display: none !important;
+      }
+      .legal-main {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  </style>
 </head>
-<body>
+<body id="top">
 
-<div class="modal-overlay" id="privacyModal">
-  <div class="modal">
-    <div class="modal-header">
-    <h2 id="modalTitle">Privacy Policy</h2>
-    <button class="decline-btn" id="declinePrivacy" title="Decline">✖</button>
+  <!-- Reading Scroll Progress Indicator -->
+  <div class="site-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Sticky Enterprise Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-modern nav-container">
+      <a href="index.html" class="brand-wrapper" title="DeccanIDentity — Home">
+        <img src="images/Logo.png" alt="DeccanIDentity Logo" class="brand-logo-img">
+        <img src="images/logoname.png" alt="DeccanIDentity" class="brand-name-img">
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links & Mega Dropdowns -->
+      <nav class="nav-navigation" aria-label="Primary Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-link-item"><a href="index.html">Home</a></li>
+          <li class="nav-link-item"><a href="ourstory.htm">Our Story</a></li>
+          
+          <!-- Solutions Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="solutions.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown solutions-dropdown" role="region" aria-label="Solutions Overview">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Enterprise Capabilities</span>
+                  <div class="mega-items-grid">
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-shield-halved"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Zero-Trust IAM Engineering</span>
+                        <span class="mega-item-desc">PingFederate, Okta, ForgeRock & CyberArk</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-cloud"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Cloud & AI Web Platforms</span>
+                        <span class="mega-item-desc">High-concurrency microservices & Next.js SaaS</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Mobile Systems</span>
+                        <span class="mega-item-desc">Native iOS, Android & React Native apps</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-robot"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise AI & Automation</span>
+                        <span class="mega-item-desc">Intelligent agents, LLM pipelines & 24/7 SLA</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-featured-card">
+                    <span class="badge-featured">Live Portfolios</span>
+                    <h5>Explore Real Builds</h5>
+                    <p>Access production web and enterprise mobile prototypes crafted by DeccanIDentity engineers.</p>
+                    <div class="featured-links">
+                      <a href="https://demo.deccanidentity.in/" target="_blank" class="featured-link-pill cyan">
+                        <span><i class="fa-solid fa-laptop-code"></i> Websites (100+)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                      <a href="https://apps.deccanidentity.in/" target="_blank" class="featured-link-pill purple">
+                        <span><i class="fa-solid fa-mobile-screen-button"></i> Mobile Apps</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Identity Tech Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="technology.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Identity Tech</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown tech-dropdown" role="region" aria-label="Identity Technology Pillars">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Architecture Pillars</span>
+                  <div class="mega-items-grid">
+                    <a href="technology.htm#verification" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Continuous Verification</span>
+                        <span class="mega-item-desc">Zero-Trust adaptive posture & context checks</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#access" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-key"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Privileged Access (PAM)</span>
+                        <span class="mega-item-desc">CyberArk, HashiCorp Vault & session audits</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#authentication" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-fingerprint"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">SSO, SAML & OIDC</span>
+                        <span class="mega-item-desc">Federated SSO, Passkeys & adaptive MFA</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#management" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-users-gear"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Automated SCIM & Governance</span>
+                        <span class="mega-item-desc">Identity lifecycle, compliance & audit trails</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-tech-card">
+                    <div class="tech-card-header">
+                      <span class="tech-status-dot"></span>
+                      <span>Zero-Trust Blueprint</span>
+                    </div>
+                    <h5>Hardened IAM Framework</h5>
+                    <p>Scalable federations adhering to NIST 800-207 Zero-Trust specifications.</p>
+                    <a href="technology.htm" class="link-arrow">
+                      <span>Explore Tech Stack</span>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Skills Hub Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="skills.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Skills Hub</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown skills-dropdown" role="region" aria-label="Skills & Career Academy">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Corporate Academy & Talent Tracks</span>
+                  <div class="mega-items-grid">
+                    <a href="skills.htm#tracks" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Tech Tracks</span>
+                        <span class="mega-item-desc">Java 21, React, Full-Stack, Spring Boot & DevOps</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm#iam-specialization" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-user-shield"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">IAM Specialization Cohort</span>
+                        <span class="mega-item-desc">Real-time PingFederate, Okta & OAuth hands-on</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm#internships" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-briefcase"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Internship 2026</span>
+                        <span class="mega-item-desc">Live production codebases & mentor reviews</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm#hire" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-user-check"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Hire Vetted Engineers</span>
+                        <span class="mega-item-desc">Pre-screened software engineers ready on Day 1</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-academy-card">
+                    <div class="academy-badge">Internship Cohort 2026</div>
+                    <h5>Fast-Track Your Tech Career</h5>
+                    <p>Work directly on production-grade enterprise software projects.</p>
+                    <a href="skills.htm#popup" class="btn-modern btn-modern-primary btn-modern-sm w-100" style="justify-content: center;">
+                      <i class="fa-solid fa-pen-to-square"></i> Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Contact Us -->
+          <li class="nav-link-item"><a href="contact.htm">Contact Us</a></li>
+
+          <!-- Mobile Drawer Footer & Actions -->
+          <li class="mobile-drawer-actions">
+            <div class="mobile-drawer-grid">
+              <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm" title="Website Templates & Live Showcases">
+                <i class="fa-solid fa-laptop-code"></i> Websites
+              </a>
+              <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm" title="Mobile & Cloud App Showcases">
+                <i class="fa-solid fa-mobile-screen-button"></i> Apps
+              </a>
+            </div>
+            <a href="https://wa.me/918186035869" target="_blank" class="btn-modern btn-whatsapp btn-modern-sm" style="width: 100%; justify-content: center;">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+91 81860 35869)
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions">
+        <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm" title="Website Templates & Live Showcases">
+          <i class="fa-solid fa-laptop-code"></i> Websites
+        </a>
+        <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm" title="Mobile & Cloud App Showcases">
+          <i class="fa-solid fa-mobile-screen-button"></i> Apps
+        </a>
+      </div>
     </div>
-    <div class="modal-content">
-      <p><strong>Deccan Identity Software Limited</strong> (“Deccan Identity”, “we”, “our”, “us”) respects your privacy and is committed to protecting your personal data.</p>
+  </header>
 
-      <h3>1. Information We Collect</h3>
-      <p>We may collect personal information such as your name, email, phone number, and usage details when you interact with our website <a href="https://www.deccanidentity.com">www.deccanidentity.com</a>.</p>
+  <!-- Mobile Drawer Backdrop -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
-      <h3>2. How We Use Information</h3>
-      <p>Your data may be used to provide services, improve user experience, send updates, and comply with legal requirements.</p>
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container-modern">
+      <span class="section-pill">Enterprise Compliance & Data Governance</span>
+      <h1 class="hero-title" style="margin-bottom: 0.75rem;">Privacy Policy</h1>
+      <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 720px; margin: 0 auto;">
+        Our commitment to safeguarding personal data through Zero-Trust architecture, robust encryption, and transparent data processing practices.
+      </p>
 
-      <h3>3. Cookies</h3>
-      <p>We may use cookies and similar technologies to enhance functionality and analyze site usage.</p>
+      <div class="legal-hero-badges">
+        <span class="legal-badge-pill"><i class="fa-solid fa-shield-halved"></i> Zero-Trust Hardened</span>
+        <span class="legal-badge-pill"><i class="fa-solid fa-calendar-check"></i> Last Updated: 2026</span>
+        <span class="legal-badge-pill"><i class="fa-solid fa-scale-balanced"></i> DPDP Act 2023 & GDPR Aligned</span>
+        <span class="legal-badge-pill"><i class="fa-solid fa-building"></i> DeccanIDentity Software Pvt. Ltd.</span>
+      </div>
+    </div>
+  </section>
 
-      <h3>4. Data Sharing</h3>
-      <p>We do not sell your personal data. We may share it with trusted service providers or as required by law.</p>
+  <!-- Main Legal Container -->
+  <main class="section-padding" style="padding-top: 40px; padding-bottom: 80px;">
+    <div class="container-modern">
+      <div class="legal-layout">
 
-      <h3>5. Data Security</h3>
-      <p>We implement industry-standard measures to protect your information from unauthorized access or misuse.</p>
+        <!-- Left Sticky TOC & Quick Actions -->
+        <aside class="legal-sidebar">
+          <details class="legal-toc-card legal-toc-accordion" id="legalTocDetails" open>
+            <summary class="legal-toc-summary" title="Click to expand/collapse table of contents">
+              <div class="legal-toc-title">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Table of Contents</span>
+              </div>
+              <span class="toc-badge-count">12 Sections</span>
+              <i class="fa-solid fa-chevron-down toc-expand-icon" aria-hidden="true"></i>
+            </summary>
+            <ul class="legal-toc-list" id="legalToc">
+              <li><a href="#section-1" class="legal-toc-link"><span class="toc-num">01.</span> Corporate Identity & Scope</a></li>
+              <li><a href="#section-2" class="legal-toc-link"><span class="toc-num">02.</span> Information We Collect</a></li>
+              <li><a href="#section-3" class="legal-toc-link"><span class="toc-num">03.</span> Legal Bases & Processing</a></li>
+              <li><a href="#section-4" class="legal-toc-link"><span class="toc-num">04.</span> Zero-Trust Security Controls</a></li>
+              <li><a href="#section-5" class="legal-toc-link"><span class="toc-num">05.</span> Cookies & Tracking Tech</a></li>
+              <li><a href="#section-6" class="legal-toc-link"><span class="toc-num">06.</span> Disclosures & Non-Sale Pledge</a></li>
+              <li><a href="#section-7" class="legal-toc-link"><span class="toc-num">07.</span> International Data Transfers</a></li>
+              <li><a href="#section-8" class="legal-toc-link"><span class="toc-num">08.</span> Retention & Sanitization</a></li>
+              <li><a href="#section-9" class="legal-toc-link"><span class="toc-num">09.</span> Your Data Subject Rights</a></li>
+              <li><a href="#section-10" class="legal-toc-link"><span class="toc-num">10.</span> Children's Privacy</a></li>
+              <li><a href="#section-11" class="legal-toc-link"><span class="toc-num">11.</span> Grievance Officer & Contact</a></li>
+              <li><a href="#section-12" class="legal-toc-link"><span class="toc-num">12.</span> Policy Modifications</a></li>
+            </ul>
+          </details>
 
-      <h3>6. Your Rights</h3>
-      <p>You have the right to request access, correction, or deletion of your personal data by contacting us.</p>
+          <div class="legal-sidebar-card">
+            <div class="sidebar-card-badge">
+              <i class="fa-solid fa-file-shield"></i>
+              <span>Official Document</span>
+            </div>
+            <h5>Export & Navigation</h5>
+            <p>Export or print this official policy document for corporate vendor reviews or regulatory compliance records.</p>
+            <div class="sidebar-btn-group">
+              <button onclick="window.print()" class="btn-legal-print w-100" title="Print document or save as PDF">
+                <i class="fa-solid fa-print"></i>
+                <span>Print / Save as PDF</span>
+              </button>
+              <a href="termsandcond.htm" class="btn-legal-switch w-100" title="View Terms & Conditions">
+                <i class="fa-solid fa-file-contract"></i>
+                <span>View Terms of Service</span>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+              </a>
+            </div>
+          </div>
+        </aside>
 
-      <h3>7. Updates</h3>
-      <p>We may update this Privacy Policy from time to time. Continued use of our website means you accept the revised terms.</p>
+        <!-- Right Main Content -->
+        <article class="legal-main">
 
-      <h3>8. Contact Us</h3>
-      <p>If you have any questions, please contact:<br>
-      <strong>Deccan Identity Software Limited</strong><br>
-      Email: <a href="mailto:info@deccanidentity.com">info@deccanidentity.com</a></p>
+          <!-- Top Document Actions Bar -->
+          <div class="legal-doc-header-actions">
+            <div class="legal-switch-tabs">
+              <span class="legal-tab-pill active">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Privacy Policy</span>
+              </span>
+              <a href="termsandcond.htm" class="legal-tab-pill" title="Switch to Terms of Service">
+                <i class="fa-solid fa-file-contract"></i>
+                <span>Terms of Service</span>
+              </a>
+            </div>
+
+            <button onclick="window.print()" class="btn-legal-print btn-legal-sm" title="Print document or save as PDF">
+              <i class="fa-solid fa-print"></i>
+              <span>Print / Save as PDF</span>
+            </button>
+          </div>
+
+          <!-- Key Highlights Grid -->
+          <div class="legal-highlights-grid">
+            <div class="legal-highlight-box">
+              <div class="hl-icon"><i class="fa-solid fa-lock"></i></div>
+              <h4>Zero-Trust Security</h4>
+              <p>Continuous verification, TLS 1.3 transit encryption, and AES-256 rest encryption.</p>
+            </div>
+
+            <div class="legal-highlight-box">
+              <div class="hl-icon"><i class="fa-solid fa-ban"></i></div>
+              <h4>No Data Monetization</h4>
+              <p>We do not sell, rent, or trade your personal data to any third-party brokers or advertisers.</p>
+            </div>
+
+            <div class="legal-highlight-box">
+              <div class="hl-icon"><i class="fa-solid fa-user-shield"></i></div>
+              <h4>Your Full Control</h4>
+              <p>Exercise your statutory rights to access, rectify, or purge your records at any time.</p>
+            </div>
+
+            <div class="legal-highlight-box">
+              <div class="hl-icon"><i class="fa-solid fa-landmark"></i></div>
+              <h4>Regulatory Aligned</h4>
+              <p>Fully compliant with India DPDP Act 2023, IT Act 2000, and global GDPR principles.</p>
+            </div>
+          </div>
+
+          <!-- Section 1 -->
+          <section id="section-1" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">01</span>
+              <h2>Corporate Identity & Scope of this Policy</h2>
+            </div>
+            <p>
+              This Privacy Policy (“Privacy Policy” or “Policy”) governs how <strong>DeccanIDentity Software Pvt. Ltd.</strong> (“DeccanIDentity”, “Company”, “we”, “our”, or “us”), an enterprise technology corporation headquartered in Hyderabad, Telangana, India, collects, uses, processes, stores, and safeguards personal information obtained through our official website (<a href="https://deccanidentity.com">deccanidentity.com</a>), demonstration platforms (<a href="https://demo.deccanidentity.in/" target="_blank">demo.deccanidentity.in</a>, <a href="https://apps.deccanidentity.in/" target="_blank">apps.deccanidentity.in</a>), enterprise service portals, communications, and recruitment/internship channels.
+            </p>
+            <p>
+              By accessing our website, inquiring about our Zero-Trust Identity and Access Management (IAM) systems, enrolling in technical programs, or utilizing our software engineering services, you acknowledge that you have read and understood this Policy.
+            </p>
+          </section>
+
+          <!-- Section 2 -->
+          <section id="section-2" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">02</span>
+              <h2>Information We Collect</h2>
+            </div>
+            <p>
+              In delivering our specialized cybersecurity, cloud engineering, and enterprise software solutions, we collect information directly from you, automatically through your interaction with our digital platforms, and via authorized third-party business partners.
+            </p>
+
+            <h3>A. Information You Voluntarily Provide</h3>
+            <ul>
+              <li><strong>Contact & Identity Details:</strong> Full name, professional email address, contact telephone number, job title, and organization name when submitting contact inquiries or RFP requests.</li>
+              <li><strong>Project & Architectural Specifications:</strong> Technical requirements, infrastructure parameters, identity provider specifications (such as PingFederate, Okta, CyberArk, or ForgeRock), and business objectives shared during consultation requests.</li>
+              <li><strong>Academy & Internship Applications:</strong> Educational background, university affiliation, degree credentials, resume/CV links, GitHub/portfolio links, and code submissions for technical evaluations.</li>
+              <li><strong>Direct Communications:</strong> Notes, emails, chat messages, or correspondence exchanged via official email addresses or verified WhatsApp business communication channels.</li>
+            </ul>
+
+            <h3>B. Automatically Collected Technical Data</h3>
+            <ul>
+              <li><strong>Device & Network Identifiers:</strong> Internet Protocol (IP) address, operating system, browser type and version, language settings, and device telemetry.</li>
+              <li><strong>Usage Analytics:</strong> Pages visited, navigation paths, referring URLs, session durations, click-stream metrics, and interaction timestamps utilized exclusively for infrastructure optimization and threat detection.</li>
+            </ul>
+
+            <div class="legal-callout info">
+              <strong><i class="fa-solid fa-circle-info"></i> Financial Information Excluded</strong>
+              We do not collect or store credit card numbers or banking PINs on this public website. All commercial payments and enterprise retainers are executed via authorized corporate banking channels and invoiced through formal procurement agreements.
+            </div>
+          </section>
+
+          <!-- Section 3 -->
+          <section id="section-3" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">03</span>
+              <h2>Legal Bases & Purpose of Processing</h2>
+            </div>
+            <p>
+              We process personal data in strict compliance with the Information Technology Act, 2000, the Digital Personal Data Protection Act, 2023 (India), and international data protection standards (including the EU GDPR). Processing occurs under the following statutory grounds:
+            </p>
+
+            <div class="legal-table-wrap">
+              <table class="legal-table">
+                <thead>
+                  <tr>
+                    <th>Legal Basis</th>
+                    <th>Processing Purpose</th>
+                    <th>Categories of Data Involved</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Contract Performance</strong></td>
+                    <td>Executing software delivery agreements, Statement of Work (SOW) deliverables, and providing technical support.</td>
+                    <td>Contact details, organization credentials, technical infrastructure requirements.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Legitimate Interests</strong></td>
+                    <td>Preventing distributed denial-of-service (DDoS) attacks, detecting unauthorized vulnerability probes, and improving web platform responsiveness.</td>
+                    <td>Server access logs, IP addresses, browser user-agents, telemetry metrics.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Consent</strong></td>
+                    <td>Sending service updates, responding to student internship applications, and answering contact requests.</td>
+                    <td>Form inputs, resume files, email addresses, phone numbers.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Legal Compliance</strong></td>
+                    <td>Fulfilling statutory tax, corporate auditing, cybersecurity incident reporting, and judicial requirements.</td>
+                    <td>Contractual records, communication logs, billing transaction identifiers.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Section 4 -->
+          <section id="section-4" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">04</span>
+              <h2>Zero-Trust Security Controls & Data Storage</h2>
+            </div>
+            <p>
+              As an enterprise organization whose core practice is Zero-Trust IAM engineering, we apply the exact same continuous-verification rigor to our internal data management as we do to Fortune 500 client infrastructures:
+            </p>
+            <ul>
+              <li><strong>Continuous Cryptographic Protection:</strong> All external web communications enforce Transport Layer Security (TLS 1.3 / HTTPS) with HTTP Strict Transport Security (HSTS). Data at rest is encrypted using military-grade Advanced Encryption Standard (AES-256).</li>
+              <li><strong>Least-Privilege & Role-Based Access:</strong> Access to internal systems and communication repositories is restricted strictly to vetted personnel on a verified need-to-know basis, protected by hardware-bound Multi-Factor Authentication (MFA).</li>
+              <li><strong>Automated Posture & Threat Monitoring:</strong> Continuous telemetry monitoring, automated intrusion prevention systems, and rigorous code audits across our repositories.</li>
+              <li><strong>Physical & Cloud Resiliency:</strong> Data hosting operates within enterprise-certified cloud data centers conforming to ISO/IEC 27001, SOC 2 Type II, and PCI-DSS physical security criteria.</li>
+            </ul>
+          </section>
+
+          <!-- Section 5 -->
+          <section id="section-5" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">05</span>
+              <h2>Cookies & Tracking Technologies</h2>
+            </div>
+            <p>
+              Cookies are compact text files stored on your computer or mobile device when you access websites. We maintain a minimal, privacy-centric cookie posture:
+            </p>
+            <ul>
+              <li><strong>Strictly Necessary Cookies:</strong> Essential for standard website navigation, load balancing, and CSRF protection. These cannot be disabled without impairing core functionality.</li>
+              <li><strong>Performance & Analytics Cookies:</strong> Aggregated, non-identifying telemetry to measure platform responsiveness, page loading speeds, and visitor engagement trends.</li>
+              <li><strong>Functional Cookies:</strong> Preserves user interface state, such as mobile drawer states or acknowledgment flags.</li>
+            </ul>
+            <p>
+              You can configure your browser preferences to alert you when cookies are placed or to reject all cookies outright. Please note that disabling cookies may affect certain interactive elements of the platform.
+            </p>
+          </section>
+
+          <!-- Section 6 -->
+          <section id="section-6" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">06</span>
+              <h2>Disclosures & Non-Sale Pledge</h2>
+            </div>
+            <div class="legal-callout">
+              <strong><i class="fa-solid fa-shield-check"></i> Absolute Non-Sale Guarantee</strong>
+              DeccanIDentity Software Pvt. Ltd. has never sold, monetized, rented, or traded personal data to third-party data brokers or marketing aggregators, and will never do so under any circumstances.
+            </div>
+            <p>
+              We disclose information only under strictly delineated operational scenarios:
+            </p>
+            <ul>
+              <li><strong>Vetted Infrastructure Sub-Processors:</strong> Reputable cloud hosting providers, transactional email delivery services, and DNS/CDN networks bound by rigorous Data Processing Agreements (DPAs) matching or exceeding this Policy.</li>
+              <li><strong>Professional Advisors:</strong> Legal counsel, certified public accountants, and corporate auditors bound by statutory professional confidentiality obligations.</li>
+              <li><strong>Judicial & Statutory Mandates:</strong> Where compelled by valid subpoena, court order, or lawful request by cybersecurity regulatory agencies under Indian law.</li>
+              <li><strong>Corporate Restructuring:</strong> In the event of a merger, acquisition, or sale of corporate assets, customer and user data will transition under the continuity of this Privacy Policy.</li>
+            </ul>
+          </section>
+
+          <!-- Section 7 -->
+          <section id="section-7" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">07</span>
+              <h2>International Data Transfers</h2>
+            </div>
+            <p>
+              Our primary operations and corporate servers are located in India. Where international infrastructure is utilized (such as globally distributed Content Delivery Networks or global cloud platforms), we ensure adequate safeguards are enacted in accordance with the Digital Personal Data Protection Act, 2023 and Standard Contractual Clauses (SCCs) recognized under international frameworks.
+            </p>
+          </section>
+
+          <!-- Section 8 -->
+          <section id="section-8" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">08</span>
+              <h2>Retention & Sanitization</h2>
+            </div>
+            <p>
+              Personal data is retained exclusively for as long as necessary to satisfy the specific purposes for which it was gathered:
+            </p>
+            <ul>
+              <li><strong>Client Project Records:</strong> Retained for the active duration of the Master Services Agreement plus statutory audit periods (typically 7 years under Indian Companies and Tax legislation).</li>
+              <li><strong>General Business Inquiries:</strong> Retained for a maximum of 24 months from the last active correspondence unless an active commercial relationship ensues.</li>
+              <li><strong>Internship & Recruitment Files:</strong> Retained for 12 months following application review for future talent pool consideration, after which resumes are permanently purged.</li>
+              <li><strong>Server Security Logs:</strong> Automatically rotated, truncated, and purged on a 90-day rolling cycle.</li>
+            </ul>
+            <p>
+              Upon expiration of statutory retention windows, data is irreversibly wiped using cryptographic erasure procedures compliant with NIST SP 800-88 standards.
+            </p>
+          </section>
+
+          <!-- Section 9 -->
+          <section id="section-9" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">09</span>
+              <h2>Your Data Subject Rights</h2>
+            </div>
+            <p>
+              Under applicable data protection laws, including the India DPDP Act 2023 and the GDPR, you enjoy enforceable statutory rights regarding your personal information:
+            </p>
+            <ul>
+              <li><strong>Right of Access & Confirmation:</strong> The right to obtain confirmation as to whether your personal data is being processed, and to receive a clear copy of stored records.</li>
+              <li><strong>Right to Rectification:</strong> The right to correct inaccurate, obsolete, or incomplete personal data held in our systems.</li>
+              <li><strong>Right to Erasure (“Right to Be Forgotten”):</strong> The right to request the deletion or purging of your personal records where valid legal grounds for retention have expired.</li>
+              <li><strong>Right to Restrict or Object:</strong> The right to halt specific processing activities based on legitimate interests or direct communication.</li>
+              <li><strong>Right to Data Portability:</strong> The right to receive your personal data in a structured, commonly used, machine-readable format.</li>
+              <li><strong>Right to Withdraw Consent:</strong> Where processing is predicated on consent, you may withdraw that consent at any time without impacting prior lawful processing.</li>
+            </ul>
+            <p>
+              To exercise any of these rights, contact our Data Protection Officer at <a href="mailto:privacy@deccanidentity.com">privacy@deccanidentity.com</a>. We respond to all verified statutory requests within 30 days without charge.
+            </p>
+          </section>
+
+          <!-- Section 10 -->
+          <section id="section-10" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">10</span>
+              <h2>Children's Privacy</h2>
+            </div>
+            <p>
+              Our website and enterprise engineering services are strictly targeted at corporate enterprises, IT professionals, university engineering students, and commercial partners. We do not knowingly solicit or collect personal identifiable information from individuals under eighteen (18) years of age. If you believe a minor has provided information through our forms, please contact us immediately for prompt record removal.
+            </p>
+          </section>
+
+          <!-- Section 11 -->
+          <section id="section-11" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">11</span>
+              <h2>Grievance Redressal & Contact Information</h2>
+            </div>
+            <p>
+              In compliance with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023, the contact details of the designated Grievance Officer and Data Protection Office are published below:
+            </p>
+
+            <div class="grievance-box">
+              <div class="grievance-item">
+                <div class="grievance-icon"><i class="fa-solid fa-user-shield"></i></div>
+                <div>
+                  <strong>Data Protection & Grievance Officer</strong>
+                  <p>Compliance & Security Directorate<br>DeccanIDentity Software Pvt. Ltd.</p>
+                </div>
+              </div>
+
+              <div class="grievance-item">
+                <div class="grievance-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <strong>Direct Email Inquiries</strong>
+                  <p><a href="mailto:privacy@deccanidentity.com">privacy@deccanidentity.com</a><br><a href="mailto:info@deccanidentity.com">info@deccanidentity.com</a></p>
+                </div>
+              </div>
+
+              <div class="grievance-item">
+                <div class="grievance-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <strong>Direct Telephone</strong>
+                  <p><a href="tel:+919000035869">+91 90000 35869</a><br><a href="tel:+918186035869">+91 81860 35869</a></p>
+                </div>
+              </div>
+
+              <div class="grievance-item">
+                <div class="grievance-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <strong>Registered Corporate Office</strong>
+                  <p>Adibatla, Hyderabad, Telangana, 501510, India</p>
+                </div>
+              </div>
+            </div>
+
+            <p style="margin-top: 1rem; font-size: 0.88rem; color: var(--text-muted);">
+              All formal privacy grievances will be acknowledged within 48 business hours, and a full investigative determination provided within 30 statutory days.
+            </p>
+          </section>
+
+          <!-- Section 12 -->
+          <section id="section-12" class="legal-section">
+            <div class="legal-section-header">
+              <span class="section-badge-num">12</span>
+              <h2>Policy Modifications & Version History</h2>
+            </div>
+            <p>
+              We periodically update this Privacy Policy to reflect advancements in our Zero-Trust infrastructure, additions to our service portfolio, or evolving statutory mandates. The current revision date is prominently displayed at the top of this document. Continued use of our web platforms following publication of modifications constitutes your acceptance of the revised terms.
+            </p>
+            <div class="legal-doc-footer-actions">
+              <div class="doc-meta-info">
+                <i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i>
+                <span>Document Version: <strong>2.9 (2026 Production Edition)</strong></span>
+              </div>
+              <div class="doc-meta-buttons">
+                <a href="#top" class="btn-legal-home btn-legal-sm" title="Back to Top">
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span>Back to Top</span>
+                </a>
+                <a href="index.html" class="btn-legal-home btn-legal-sm" title="Return to Home">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Return to Home</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Enterprise Footer -->
+  <footer class="site-footer" id="contactFooter">
+    <div class="container-modern">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col">
+          <div class="footer-brand-badge">
+            <img src="images/Logo.png" alt="DeccanIDentity Logo" class="footer-brand-logo-img">
+            <img src="images/logoname.png" alt="DeccanIDentity" class="footer-brand-name-img">
+          </div>
+          <p style="color: rgba(255, 255, 255, 0.95); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            DeccanIDentity Software Pvt. Ltd. is a premier technology partner delivering Zero-Trust Identity Access Management, bespoke Web & Mobile development, and Cloud engineering solutions.
+          </p>
+          <div class="social-links">
+            <a href="https://wa.me/918186035869" target="_blank" class="social-btn" title="WhatsApp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/deccanidentity" target="_blank" class="social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.fb.com/deccanidentity" target="_blank" class="social-btn" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/deccanidentity_india" target="_blank" class="social-btn" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/DeccanIdentity" target="_blank" class="social-btn" title="Twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@DeccanIdentity" target="_blank" class="social-btn" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ourstory.htm">Our Story & About</a></li>
+            <li><a href="solutions.htm">Enterprise Solutions</a></li>
+            <li><a href="technology.htm">Identity Technologies</a></li>
+            <li><a href="skills.htm">Skills Hub & Careers</a></li>
+            <li><a href="https://demo.deccanidentity.in/" target="_blank">Websites (Templates) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
+            <li><a href="https://apps.deccanidentity.in/" target="_blank">Apps (Mobile & Cloud) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
+            <li><a href="contact.htm">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Key Services -->
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.htm">Zero-Trust IAM Security</a></li>
+            <li><a href="solutions.htm">Okta & PingFederate Solutions</a></li>
+            <li><a href="solutions.htm">AI & Web Development</a></li>
+            <li><a href="solutions.htm">Mobile App Engineering</a></li>
+            <li><a href="skills.htm">Internship Programs</a></li>
+            <li><a href="privacy.htm">Privacy Policy</a></li>
+            <li><a href="termsandcond.htm">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Locations -->
+        <div class="footer-col">
+          <h4>Office Locations</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Registered Office:</strong><br>
+                DeccanIDentity Software Pvt. Ltd.<br>
+                Adibatla, Hyderabad, Telangana, 501510, India
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-building"></i>
+              <div>
+                <strong>Branch Offices:</strong><br>
+                Ongole (AP) & Tirupati (AP), India
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <a href="tel:+919000035869" style="color: #ffffff;">+91 90000 35869</a> / 
+                <a href="tel:+919494765679" style="color: #ffffff;">+91 94947 65679</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <a href="mailto:info@deccanidentity.com" style="color: #ffffff;">info@deccanidentity.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="modal-footer">
-      <label>
-        <input type="checkbox" id="agreeCheck"> I agree to the Privacy Policy @ Deccan Identity Software Private Limited
-      </label>
-      <button id="submitPrivacy" disabled>Submit</button>
+    <!-- Bottom Bar (Full-Width Dark Teal) -->
+    <div class="footer-bottom">
+      <div class="container-modern">
+        <div class="footer-bottom-flex">
+          <div>
+            &copy; <span id="currentYear" class="current-year">2026</span> <strong>DeccanIDentity Software Pvt. Ltd.</strong> All Rights Reserved.
+          </div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="privacy.htm" style="color: rgba(255, 255, 255, 0.88);">Privacy Policy</a>
+            <a href="termsandcond.htm" style="color: rgba(255, 255, 255, 0.88);">Terms of Service</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </footer>
+
+  <!-- Floating Actions (WhatsApp & Back To Top) -->
+  <div class="floating-actions" aria-label="Quick Actions">
+    <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <a href="https://wa.me/918186035869" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="floating-whatsapp__tooltip"><span class="floating-whatsapp__tooltip-dot" aria-hidden="true"></span> WhatsApp</span>
+    </a>
   </div>
-</div>
 
-<script>
-  const agreeCheck = document.getElementById("agreeCheck");
-  const submitPrivacy = document.getElementById("submitPrivacy");
-  const declinePrivacy = document.getElementById("declinePrivacy");
+  <script src="js/modern.js?v=2.9"></script>
+  <script>
+    // Responsive TOC collapse & Smooth active scrollspy
+    document.addEventListener('DOMContentLoaded', () => {
+      const tocLinks = document.querySelectorAll('.legal-toc-link');
+      const sections = document.querySelectorAll('.legal-section');
+      const tocDetails = document.getElementById('legalTocDetails');
 
+      // On mobile/tablet, collapse the TOC by default so user sees policy content immediately
+      function handleResponsiveToc() {
+        if (window.innerWidth <= 991 && tocDetails) {
+          tocDetails.removeAttribute('open');
+        } else if (tocDetails) {
+          tocDetails.setAttribute('open', '');
+        }
+      }
+      handleResponsiveToc();
+      window.addEventListener('resize', handleResponsiveToc, { passive: true });
 
-  // Enable button only if checkbox is ticked
-  agreeCheck.addEventListener("change", () => {
-    submitPrivacy.disabled = !agreeCheck.checked;
-  });
+      // When a TOC link is clicked on mobile, close accordion smoothly
+      tocLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 991 && tocDetails) {
+            tocDetails.removeAttribute('open');
+          }
+        });
+      });
 
-  // Redirect back to previous page
-  submitPrivacy.addEventListener("click", () => {
-    window.history.back();
-  });
+      // Active scrollspy
+      function updateActiveToc() {
+        let currentSectionId = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 140;
+          if (window.scrollY >= sectionTop) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
 
-  declinePrivacy.addEventListener("click", () => {
-    window.history.back();
-  });
-</script>
+        tocLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentSectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
 
+      window.addEventListener('scroll', updateActiveToc, { passive: true });
+      updateActiveToc();
+    });
+  </script>
 </body>
 </html>

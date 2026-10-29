@@ -1,637 +1,1139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DeccanIDentity delivers secure enterprise solutions in web & mobile development, AI-powered identity access management, and cybersecurity with 24×7 expert support">
-<meta name="author" content="https://deccanidentity.com/">
-<title>DeccanIDentity-SkillsHub</title>
-<link rel="icon" type="image/png" href="images/Logo.png">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/flexslider.css"/>
-<!-- Custom styles for our template -->
-<link rel="stylesheet" href="css/bootstrap-theme.css" media="screen" >
-<link rel="stylesheet" type="text/css" href="css/da-slider.css" />
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/deccan-identity.css">
-<link rel="stylesheet" href="css/form-popup.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Hub, Training & Internships | DeccanIDentity</title>
+  <meta name="description" content="Kickstart your tech career with DeccanIDentity. Real-time project internships, cybersecurity, IAM tools, Full Stack Java, GenAI, and cloud certifications.">
+  <link rel="canonical" href="https://deccanidentity.com/skills.htm">
+  <link rel="icon" type="image/png" href="images/Logo.png">
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-	
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/modern.css?v=2.9">
+  <link rel="stylesheet" href="css/form-popup.css">
+  <style>
+    .career-banner {
+      background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      margin-bottom: 3.5rem;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+    .career-banner h2 {
+      color: #ffffff;
+      font-size: 1.85rem;
+      margin-bottom: 0.75rem;
+    }
+    .career-banner p {
+      color: #cbd5e1;
+      font-size: 1.02rem;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+    .course-category-title {
+      font-size: 1.45rem;
+      margin: 2.75rem 0 1.35rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--border-subtle);
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.15rem;
+      margin-bottom: 3rem;
+    }
+    .flip-card {
+      background-color: transparent;
+      height: 220px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 4px 14px -3px rgba(15, 23, 42, 0.08);
+    }
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus-within .flip-card-inner,
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 0.65rem;
+      border: 1px solid var(--border-subtle);
+    }
+    .flip-card-front {
+      background-color: #ffffff;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .flip-card:hover .flip-card-front {
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.15);
+    }
+    .flip-card-front img {
+      max-height: 95px;
+      max-width: 82%;
+      object-fit: contain;
+      transition: transform 0.35s ease;
+      margin-bottom: 0.55rem;
+    }
+    .flip-card:hover .flip-card-front img {
+      transform: scale(1.08);
+    }
+    .flip-card-front-title {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #0f172a;
+      text-align: center;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 95%;
+    }
+    .flip-card-front-hint {
+      font-size: 0.68rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-weight: 500;
+    }
+    .flip-card-back {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      transform: rotateY(180deg);
+      border-color: rgba(37, 99, 235, 0.35);
+      padding: 0.85rem 0.65rem;
+    }
+    .flip-card-back h3, .flip-card-back h4 {
+      font-size: 0.98rem;
+      color: #ffffff;
+      margin-bottom: 0.3rem;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+    }
+    .flip-card-back label {
+      color: #ffffff !important;
+    }
+    .course-badge {
+      font-size: 0.7rem;
+      color: #38bdf8;
+      background: rgba(2, 132, 199, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 0.18rem 0.5rem;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .course-hours {
+      font-size: 0.72rem;
+      color: #cbd5e1;
+      margin-bottom: 0.65rem;
+    }
+    .btn-register-course {
+      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+      color: #ffffff;
+      border: none;
+      padding: 0.36rem 0.75rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 90%;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+    }
+    .btn-register-course:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5);
+    }
+
+    /* Responsive Breakpoints for 6-Column Iconic Shelf */
+    @media (max-width: 1200px) {
+      .courses-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.85rem;
+      }
+      .flip-card {
+        height: 210px;
+      }
+      .flip-card-front img {
+        max-height: 85px;
+      }
+      .flip-card-front-title {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .career-banner {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+      }
+      .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.15rem;
+      }
+      .flip-card {
+        height: 215px;
+      }
+      .flip-card-front img {
+        max-height: 95px;
+      }
+      .flip-card-front-title {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+      }
+      .flip-card {
+        height: 205px;
+      }
+      .flip-card-front {
+        padding: 0.75rem 0.5rem;
+      }
+      .flip-card-front img {
+        max-height: 80px;
+        margin-bottom: 0.35rem;
+      }
+      .flip-card-front-title {
+        font-size: 0.78rem;
+      }
+      .course-category-title {
+        font-size: 1.25rem;
+        margin: 2rem 0 1rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+      }
+      .flip-card {
+        height: 195px;
+      }
+      .flip-card-front img {
+        max-height: 72px;
+      }
+      .flip-card-front-title {
+        font-size: 0.74rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<img src="images/Logo.png" alt="DeccanIDentity Logo" height="33" width="33"/>
-				<img src="images/logoname.png" alt="DeccanIDentity Logo Text" class="logo-text" height="35"/>
-			</div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav pull-right">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="ourstory.htm">OurStory</a></li>
-		<li><a href="solutions.htm">Solutions</a></li>
-		<li><a href="technology.htm">IdentityTech</a></li>
-		<li class="active"><a href="skills.htm">SkillsHub</a></li>
-		<li><a href="contact.htm">ContactUs</a></li>
-      </ul>
+
+  <!-- Reading Scroll Progress Indicator -->
+  <div class="site-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Sticky Enterprise Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-modern nav-container">
+      <a href="index.html" class="brand-wrapper" title="DeccanIDentity - Home">
+        <img src="images/Logo.png" alt="DeccanIDentity Logo" class="brand-logo-img">
+        <img src="images/logoname.png" alt="DeccanIDentity" class="brand-name-img">
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links & Mega Dropdowns -->
+      <nav class="nav-navigation" aria-label="Primary Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-link-item"><a href="index.html">Home</a></li>
+          <li class="nav-link-item"><a href="ourstory.htm">Our Story</a></li>
+          
+          <!-- Solutions Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="solutions.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown solutions-dropdown" role="region" aria-label="Solutions Overview">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Enterprise Capabilities</span>
+                  <div class="mega-items-grid">
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-shield-halved"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Zero-Trust IAM Engineering</span>
+                        <span class="mega-item-desc">PingFederate, Okta, ForgeRock & CyberArk</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-cloud"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Cloud & AI Web Platforms</span>
+                        <span class="mega-item-desc">High-concurrency microservices & Next.js SaaS</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Mobile Systems</span>
+                        <span class="mega-item-desc">Native iOS, Android & React Native apps</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-robot"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise AI & Automation</span>
+                        <span class="mega-item-desc">Intelligent agents, LLM pipelines & 24/7 SLA</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-featured-card">
+                    <div class="featured-badge">
+                      <span class="live-dot-ping"></span> Live Showcases
+                    </div>
+                    <h4 class="featured-title">Interactive Enterprise Demos</h4>
+                    <p class="featured-desc">Explore ready-to-deploy enterprise web portals and native mobile experiences.</p>
+                    <div class="featured-links">
+                      <a href="https://demo.deccanidentity.in/" target="_blank" class="featured-link-pill cyan">
+                        <span><i class="fa-solid fa-laptop-code"></i> Websites (100+)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                      <a href="https://apps.deccanidentity.in/" target="_blank" class="featured-link-pill purple">
+                        <span><i class="fa-solid fa-mobile-screen-button"></i> Mobile Apps</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Identity Tech Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="technology.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Identity Tech</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown tech-dropdown" role="region" aria-label="Identity Technology Pillars">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Architecture Pillars</span>
+                  <div class="mega-items-grid">
+                    <a href="technology.htm#verification" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Continuous Verification</span>
+                        <span class="mega-item-desc">Zero-Trust adaptive posture & context checks</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#access" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-key"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Privileged Access (PAM)</span>
+                        <span class="mega-item-desc">CyberArk, HashiCorp Vault & session audits</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#authentication" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-fingerprint"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">SSO, SAML & OIDC</span>
+                        <span class="mega-item-desc">Federated SSO, Passkeys & adaptive MFA</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#management" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-users-gear"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Automated SCIM & Governance</span>
+                        <span class="mega-item-desc">Identity lifecycle, compliance & audit trails</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-tech-card">
+                    <div class="tech-card-pill">
+                      <i class="fa-solid fa-certificate"></i> Certified Lead
+                    </div>
+                    <h4 class="featured-title">PingFederate & Okta Specialists</h4>
+                    <p class="featured-desc">Certified engineering leads implementing fault-tolerant federated SSO architectures with 99.99% uptime.</p>
+                    <a href="technology.htm" class="tech-cta-link">
+                      Explore Architecture <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Skills Hub Mega Menu (Active) -->
+          <li class="nav-link-item has-dropdown active">
+            <a href="skills.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Skills Hub</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown skills-dropdown" role="region" aria-label="Skills & Programs">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Programs & Bootcamps</span>
+                  <div class="mega-items-grid">
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-user-graduate"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Live Internship</span>
+                        <span class="mega-item-desc">Hands-on live software delivery & mentoring</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-user-shield"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Cybersecurity & IAM Track</span>
+                        <span class="mega-item-desc">PingFederate, Okta, CyberArk & SailPoint labs</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-code"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Fullstack Cloud Engineering</span>
+                        <span class="mega-item-desc">React, Next.js, Node, Java & AWS Microservices</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-brain"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Applied AI & Machine Learning</span>
+                        <span class="mega-item-desc">LLMs, Agentic AI, PyTorch & Data Pipelines</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-skills-card">
+                    <div class="featured-badge skills-badge">
+                      <i class="fa-solid fa-bolt"></i> Enrollment Open
+                    </div>
+                    <h4 class="featured-title">Accelerate Your Engineering Career</h4>
+                    <p class="featured-desc">Cohort-based learning with real code reviews, practical repos & certification guidance.</p>
+                    <a href="skills.htm#popup" class="btn-modern btn-modern-primary btn-modern-sm w-100" style="justify-content: center;">
+                      <i class="fa-solid fa-pen-to-square"></i> Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Contact Us -->
+          <li class="nav-link-item"><a href="contact.htm">Contact Us</a></li>
+
+          <!-- Mobile Drawer Footer & Actions -->
+          <li class="mobile-drawer-actions">
+            <div class="mobile-drawer-grid">
+              <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm" title="Website Templates & Live Showcases">
+                <i class="fa-solid fa-laptop-code"></i> Websites
+              </a>
+              <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm" title="Mobile & Cloud App Showcases">
+                <i class="fa-solid fa-mobile-screen-button"></i> Apps
+              </a>
+            </div>
+            <a href="https://wa.me/918186035869" target="_blank" class="btn-modern btn-whatsapp btn-modern-sm" style="width: 100%; justify-content: center;">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+91 81860 35869)
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions">
+        <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm" title="Website Templates & Live Showcases">
+          <i class="fa-solid fa-laptop-code"></i> Websites
+        </a>
+        <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm" title="Mobile & Cloud App Showcases">
+          <i class="fa-solid fa-mobile-screen-button"></i> Apps
+        </a>
+      </div>
     </div>
-    <!--/.nav-collapse --> 
-  </div>
-</div>
-<!-- /.navbar --> 
-		
-<header id="head" class="secondary"></header>
-<div class="container serviceslist">
-  <div class="row">
-    <div class="col-md-12">
-      <header class="page-header">
-        <h1 class="page-title">Skills Hub</h1>
-      </header>	 
-	  	<h4 style="color: #2c3e50;">🎓 <strong>Kickstart Your Tech Career with DeccanIDentity!</strong></h4>
-	  	  <p>
-			<strong><img src="images/internship.png" alt="Internship Program" width="20" height="20"> Internship : </strong>
+  </header>
 
-			<strong>DeccanIDentity</strong> offers <strong>internship</strong> opportunities with real-time projects to build practical industry experience and career-ready skills. 
-			<a href="https://forms.gle/cc4wpKcPn7djtn7G7" 
-			target="_blank" 
-			style="background:#0477f2;color:#ffffff;padding:5px 12px;
-					text-decoration:none;border-radius:10px;font-weight:600;">
-			👉 Enroll Now
-			</a>
-			<br><br>
-			<strong><img src="images/training.png" alt="Internship Program" width="20" height="20"> Software Training : </strong>
-			<strong>DeccanIDentity</strong> offers comprehensive <strong>software training</strong> from beginner to advanced levels, featuring industry-recognized certifications and hands-on learning experiences.
-	  	  📌 Register with your <strong>email id</strong> and <strong>mobile number</strong> to receive details about course structure, duration, internship options, and fees.
-	  	  </p>
-	  	  <p>
-	      </p>
+  <!-- Mobile Drawer Backdrop -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container-modern">
+      <span class="section-pill">Empowering Engineers</span>
+      <h1 class="hero-title" style="margin-bottom: 0.75rem;">Skills Hub & Talent Programs</h1>
+      <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 720px; margin: 0 auto;">
+        Real-world project internships and comprehensive software training programs designed to accelerate tech careers in cybersecurity, full-stack, and AI.
+      </p>
     </div>
-  </div> 
-</div>
+  </section>
 
-	
-	<section id="content">
-	<div class="container">
-	
-	      <div class="row">
-			<div class="col-lg-12">
-				<h4 class="courseH4">Cyber Security Tools</h4>
-			</div><br><br>
-			<div class="col-lg-2">
-	           <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/pi.png" height="200" alt="Ping" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      <h3><label style="color:black;">Ping</label><label style="color:#cd2a2a;">Federate</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">60 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/fgr.png" height="180" alt="ForgeRock" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">ForgeRock</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">80 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/cbr.png" height="160"alt="CyberArk" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">CyberArk</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">80 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary"onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/Entra Id.png" height="200" alt="Entra Id" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">IAM [Entra ID]</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">120 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/Okta.png" height="200" alt="Okta" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">Okta</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">80 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">
-	           <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/Sailpoint.png" height="200" alt="Sailpoint" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      <h3><label style="color:black;">Sailpoint</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">80 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-			</div> <!-- Row -->
-			
-			<div class="row">
-			<div class="col-lg-12">
-				<h4 class="courseH4">Fullstack Skills</h4>
-			</div><br><br>
-			<div class="col-lg-2">
-	           <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/web.png" alt="Fullstack UI Skills" height="200"/>
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">Fullstack UI Skills</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">80 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/javafs.png" height="200" alt="Java Fullstack" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">Java Fullstack</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">80 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/Spring.png" height="200" alt="Spring Boot Framework" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">Spring Boot Framework</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">60 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/php.png" height="200" 	alt="PHP Fullstack" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">PHP Fullstack</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">80 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/pytn.png" height="200" alt="Python Fullstack" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">Python Fullstack</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">120 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/Saas.jpeg" height="200" alt="SaaS & Cloud Development" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      
-					      <h3><label style="color:#352a6f;">SaaS & Cloud Development</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">120 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				
-			</div> <!-- Row -->
-			
-			<!-- Example for new row: AI & Data Skills -->
-	<div class="row">
-  <div class="col-lg-12">
-    <h4 class="courseH4">AI & Data Skills</h4>
-  </div><br><br>
-  <div class="col-lg-2">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="images/offers/Gen_AI.jpeg" height="200" alt="Generative AI" />
+  <!-- Main Content -->
+  <section class="section-padding" style="padding-top: 30px;">
+    <div class="container-modern">
+      <!-- Internship & Training Spotlight Banner -->
+      <div class="career-banner">
+        <div>
+          <h2><i class="fa-solid fa-graduation-cap"></i> Kickstart Your Tech Career with DeccanIDentity!</h2>
+          <p>
+            <strong><img src="images/internship.png" alt="Internship" style="display:inline-block; vertical-align:middle; width:20px; height:20px;"> Internship Opportunities:</strong>
+            DeccanIDentity offers hands-on internships with real-time enterprise projects in Cybersecurity, AI, and Full-Stack development to build portfolio-ready skills.
+          </p>
+          <p style="margin-top: 0.75rem;">
+            <strong><img src="images/training.png" alt="Training" style="display:inline-block; vertical-align:middle; width:20px; height:20px;"> Software Training & Certifications:</strong>
+            Beginner to advanced courses with industry-recognized certifications and expert mentorship.
+          </p>
         </div>
-        <div class="flip-card-back">
-          <h3><label style="color:#352a6f;">Generative AI</label></h3>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">Essentials</p>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">40 Hrs</p>
-          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')">📩Register</button>
+        <div>
+          <a href="https://forms.gle/cc4wpKcPn7djtn7G7" target="_blank" class="btn-modern btn-modern-cyan" style="font-size: 1.05rem; padding: 1rem 2rem;">
+            <i class="fa-solid fa-arrow-right"></i> Enroll in Internship / Training
+          </a>
+        </div>
+      </div>
+
+      <!-- Category 1: Cyber Security Tools -->
+      <h3 class="course-category-title"><i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> Cyber Security & IAM Tools</h3>
+      <div class="courses-grid">
+        <!-- PingFederate -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/pi.png" alt="PingFederate">
+              <span class="flip-card-front-title">PingFederate</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>PingFederate</h3>
+              <p class="course-badge">Online Live Course</p>
+              <p class="course-hours">60 Hours &bull; Real Labs</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ForgeRock -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/fgr.png" alt="ForgeRock">
+              <span class="flip-card-front-title">ForgeRock IAM</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>ForgeRock</h3>
+              <p class="course-badge">Full Online Course</p>
+              <p class="course-hours">80 Hours &bull; Hands-on</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CyberArk -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/cbr.png" alt="CyberArk">
+              <span class="flip-card-front-title">CyberArk PAM</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>CyberArk</h3>
+              <p class="course-badge">PAM Architecture</p>
+              <p class="course-hours">80 Hours &bull; Certification</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entra ID -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Entra Id.png" alt="Microsoft Entra ID">
+              <span class="flip-card-front-title">Entra ID (Azure)</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Entra ID (Azure)</h3>
+              <p class="course-badge">Cloud Identity</p>
+              <p class="course-hours">120 Hours &bull; SSO & MFA</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Okta -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Okta.png" alt="Okta Identity">
+              <span class="flip-card-front-title">Okta IAM</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Okta IAM</h3>
+              <p class="course-badge">Workforce Identity</p>
+              <p class="course-hours">80 Hours &bull; OIDC/SAML</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SailPoint -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Sailpoint.png" alt="SailPoint">
+              <span class="flip-card-front-title">SailPoint IIQ</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>SailPoint</h3>
+              <p class="course-badge">Identity Governance</p>
+              <p class="course-hours">80 Hours &bull; IdentityIQ</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse','entry.1820924','entry.1869323879','entry.1277797673','entry.665800355')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Fullstack Skills -->
+      <h3 class="course-category-title"><i class="fa-solid fa-code" style="color: var(--secondary);"></i> Fullstack & Web Skills</h3>
+      <div class="courses-grid">
+        <!-- Fullstack UI -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/web.png" alt="Fullstack UI Skills">
+              <span class="flip-card-front-title">Fullstack React</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Fullstack UI</h3>
+              <p class="course-badge">React & Next.js</p>
+              <p class="course-hours">80 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Java Fullstack -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/javafs.png" alt="Java Fullstack">
+              <span class="flip-card-front-title">Java Fullstack</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Java Fullstack</h3>
+              <p class="course-badge">Java 17+ & Microservices</p>
+              <p class="course-hours">80 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spring Boot -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Spring.png" alt="Spring Boot">
+              <span class="flip-card-front-title">Spring Boot</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Spring Boot</h3>
+              <p class="course-badge">Cloud Microservices</p>
+              <p class="course-hours">60 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHP Fullstack -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/php.png" alt="PHP Fullstack">
+              <span class="flip-card-front-title">PHP Laravel</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>PHP Fullstack</h3>
+              <p class="course-badge">Laravel & MySQL</p>
+              <p class="course-hours">80 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python Fullstack -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/pytn.png" alt="Python Fullstack">
+              <span class="flip-card-front-title">Python Fullstack</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Python Fullstack</h3>
+              <p class="course-badge">Django & FastAPI</p>
+              <p class="course-hours">120 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SaaS & Cloud -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Saas.jpeg" alt="SaaS and Cloud">
+              <span class="flip-card-front-title">SaaS & Cloud</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>SaaS & Cloud</h3>
+              <p class="course-badge">AWS & Architecture</p>
+              <p class="course-hours">120 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSelLaZ9EzJb2eQpkvby9DHWcoDj_f4rhZ0GuiHbwJnAX4JLMQ/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: AI & Data Skills -->
+      <h3 class="course-category-title"><i class="fa-solid fa-robot" style="color: #8b5cf6;"></i> AI & Data Intelligence Skills</h3>
+      <div class="courses-grid">
+        <!-- Gen AI -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Gen_AI.jpeg" alt="Generative AI">
+              <span class="flip-card-front-title">Generative AI</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Generative AI</h3>
+              <p class="course-badge">LLMs & Agents</p>
+              <p class="course-hours">40 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- OpenAI APIs -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Open_Ai.png" alt="OpenAI APIs">
+              <span class="flip-card-front-title">OpenAI APIs</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>OpenAI APIs</h3>
+              <p class="course-badge">Hands-On Integration</p>
+              <p class="course-hours">60 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kafka -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/kafka.png" alt="Apache Kafka">
+              <span class="flip-card-front-title">Apache Kafka</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Apache Kafka</h3>
+              <p class="course-badge">Event Streaming</p>
+              <p class="course-hours">40 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Analyst -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Data_anal.png" alt="Data Analyst">
+              <span class="flip-card-front-title">Data Analytics</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Data Analytics</h3>
+              <p class="course-badge">SQL, PowerBI & Python</p>
+              <p class="course-hours">100 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prompt Engineering -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Pmt_en_ai.jpeg" alt="Prompt Engineering">
+              <span class="flip-card-front-title">Prompt Eng.</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Prompt Eng.</h3>
+              <p class="course-badge">AI Workflows</p>
+              <p class="course-hours">40 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/ML.jpg" alt="Machine Learning">
+              <span class="flip-card-front-title">Machine Learning</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Machine Learning</h3>
+              <p class="course-badge">Scikit, PyTorch, Models</p>
+              <p class="course-hours">80 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4: Mobility Skills -->
+      <h3 class="course-category-title"><i class="fa-solid fa-mobile-screen" style="color: var(--accent-cyan);"></i> Mobility & App Engineering</h3>
+      <div class="courses-grid">
+        <!-- Android -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/android.png" alt="Android Development">
+              <span class="flip-card-front-title">Android Kotlin</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Android Kotlin</h3>
+              <p class="course-badge">Native Android</p>
+              <p class="course-hours">120 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- iOS -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/ios.png" alt="iOS Apple Development">
+              <span class="flip-card-front-title">iOS Swift</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>iOS Swift</h3>
+              <p class="course-badge">SwiftUI & Cocoa</p>
+              <p class="course-hours">120 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript Fullstack & Mobile -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/js.png" alt="JavaScript Frameworks">
+              <span class="flip-card-front-title">JS Fullstack</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>JS Fullstack</h3>
+              <p class="course-badge">Web & React Native</p>
+              <p class="course-hours">120 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hybrid Mobile (Flutter) -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/Mobile.jpeg" alt="Hybrid Mobile Development">
+              <span class="flip-card-front-title">Flutter Mobile</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Flutter Mobile</h3>
+              <p class="course-badge">Cross-Platform</p>
+              <p class="course-hours">120 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- React Native -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/react_native.svg" alt="React Native App Development">
+              <span class="flip-card-front-title">React Native</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>React Native</h3>
+              <p class="course-badge">iOS & Android</p>
+              <p class="course-hours">80 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI/UX Design -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/offers/UX.jpg" alt="UX Design">
+              <span class="flip-card-front-title">UI/UX Design</span>
+              <span class="flip-card-front-hint"><i class="fa-solid fa-arrows-rotate"></i> Flip for details</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>UI/UX Design</h3>
+              <p class="course-badge">Figma & Design Systems</p>
+              <p class="course-hours">60 Hours</p>
+              <button type="button" class="btn-register-course" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')"><i class="fa-solid fa-pen-to-square"></i> Register</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-lg-2">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="images/offers/Open_Ai.png" height="200" alt="OpenAI APIs" />
-        </div>
-        <div class="flip-card-back">
-          <h3><label style="color:#352a6f;">OpenAI APIs</label></h3>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">Hands-on</p>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">60 Hrs</p>
-          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')">📩Register</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-2">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="images/offers/kafka.png" alt="Apache Kafka" height="200"/>
-        </div>
-        <div class="flip-card-back">
-          <h3><label style="color:#352a6f;">Apache Kafka (Data Streaming)</label></h3>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">40 Hrs</p>
-          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')">📩Register</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-2">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="images/offers/Data_anal.png" height="200" alt="Data Analyst" />
-        </div>
-        <div class="flip-card-back">
-          <h3><label style="color:#352a6f;">Data Analyst</label></h3>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">Essentials</p>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">100 Hrs</p>
-          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')">📩Register</button>
-        </div>
-      </div>
+  </section>
+
+  <!-- Registration Popup Modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closePopup()" aria-label="Close dialog">&times;</button>
+      <h3><i class="fa-solid fa-file-pen"></i> Course Registration Inquiry</h3>
+      <form id="googleForm" class="open-popup-form">
+        <input type="text" name="name" id="name" placeholder="Full Name *" required class="open-popup-input"/>
+        <input type="email" name="email" id="email" placeholder="Email Address *" required class="open-popup-input" />
+        <input type="number" name="mobile" id="mobile" placeholder="+91 Phone Number *" required class="open-popup-input" />
+        <textarea name="message" id="message" placeholder="Preferred batch timing or any questions..." rows="4" required class="open-popup-textarea"></textarea>
+        <button type="submit" id="submitButton" class="open-popup-button">Submit Registration</button>
+        <div class="formstatus" id="formstatus"></div>
+      </form>
     </div>
   </div>
 
-  	<div class="col-lg-2">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="images/offers/Pmt_en_ai.jpeg" height="200"alt="Prompt Engineering for AI" />
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container-modern">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="footer-brand-badge">
+            <img src="images/Logo.png" alt="DeccanIDentity Logo" class="footer-brand-logo-img">
+            <img src="images/logoname.png" alt="DeccanIDentity" class="footer-brand-name-img">
+          </div>
+          <p style="color: rgba(255, 255, 255, 0.95); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            DeccanIDentity delivers Zero-Trust IAM, full-stack AI web engineering, and enterprise mobility solutions with 24x7 expert support.
+          </p>
+          <div class="social-links">
+            <a href="https://wa.me/918186035869" target="_blank" class="social-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/deccanidentity" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.fb.com/deccanidentity" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/deccanidentity_india" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/DeccanIdentity" target="_blank" class="social-btn" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@DeccanIdentity" target="_blank" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
-        <div class="flip-card-back">
-          <h3><label style="color:#352a6f;">Prompt Engineering for AI</label></h3>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">Essentials</p>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">40 Hrs</p>
-          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')">📩Register</button>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ourstory.htm">Our Story & About</a></li>
+            <li><a href="solutions.htm">Enterprise Solutions</a></li>
+            <li><a href="technology.htm">Identity Technologies</a></li>
+            <li><a href="skills.htm">Skills Hub & Careers</a></li>
+            <li><a href="https://demo.deccanidentity.in/" target="_blank">Websites (Templates) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
+            <li><a href="https://apps.deccanidentity.in/" target="_blank">Apps (Mobile & Cloud) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
+            <li><a href="contact.htm">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.htm">Zero-Trust IAM Security</a></li>
+            <li><a href="solutions.htm">Okta & PingFederate Solutions</a></li>
+            <li><a href="solutions.htm">AI & Web Development</a></li>
+            <li><a href="solutions.htm">Mobile App Engineering</a></li>
+            <li><a href="skills.htm">Internship Programs</a></li>
+            <li><a href="privacy.htm">Privacy Policy</a></li>
+            <li><a href="termsandcond.htm">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Office Locations</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Registered Office:</strong><br>
+                DeccanIDentity Software Pvt. Ltd.<br>
+                Adibatla, Hyderabad, Telangana, 501510, India
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <a href="tel:+919000035869" style="color: #cbd5e1;">+91 90000 35869</a> / 
+                <a href="tel:+919494765679" style="color: #cbd5e1;">+91 94947 65679</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <a href="mailto:info@deccanidentity.com" style="color: #cbd5e1;">info@deccanidentity.com</a>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="col-lg-2">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="images/offers/ML.jpg" height="200"alt="Machine Learning Essentials" />
-        </div>
-        <div class="flip-card-back">
-          <h3><label style="color:#352a6f;">Machine Learning Essentials</label></h3>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-          <p style="font-size: 12px;color: blue;font-weight: bold;">80 Hrs</p>
-          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLScok7nSxpqrlffERRY50g7A4vQRn3P79_DxNZdpD6jcKlWqjQ/formResponse','entry.1682686690','entry.277564281','entry.455721400','entry.734420156')">📩Register</button>
+    <div class="footer-bottom">
+      <div class="container-modern">
+        <div class="footer-bottom-flex">
+          <div>
+            &copy; <span id="currentYear" class="current-year">2026</span> <strong>DeccanIDentity Software Pvt. Ltd.</strong> All Rights Reserved.
+          </div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="privacy.htm" style="color: rgba(255, 255, 255, 0.85);">Privacy Policy</a>
+            <a href="termsandcond.htm" style="color: rgba(255, 255, 255, 0.85);">Terms of Service</a>
+          </div>
         </div>
       </div>
     </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <a href="https://wa.me/918186035869" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="floating-whatsapp__tooltip"><span class="floating-whatsapp__tooltip-dot" aria-hidden="true"></span> WhatsApp</span>
+    </a>
   </div>
 
-</div>
-
-			<div class="row">
-			<div class="col-lg-12">
-				<h4 class="courseH4">Mobility Skills</h4>
-			</div><br><br>
-			<div class="col-lg-2">
-	           <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/android.png" height="200" alt="Android Development" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      <h3><label style="color:#352a6f;">Android Development</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">120 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/ios.png" alt="IOS(Apple) Development" height="200"/>
-					    </div>
-					    <div class="flip-card-back">					      
-					      <h3><label style="color:#352a6f;">IOS(Apple) Development</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">120 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/bb.png" alt="Blackberry Development" height="200" />
-					    </div>
-					    <div class="flip-card-back">					      
-					      <h3><label style="color:#352a6f;">Blackberry Development</label></h3>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">120 Hrs</p>
-					      <button type="button" class="btn btn-sm btn-outline-secondary"onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/js.png" alt="JavaScript Framework Web & Mobile Development" height="200"/>
-					    </div>
-					   <div class="flip-card-back">					      
-					      <h4><label style="color:#352a6f;">JavaScript Framework Web & Mobile Development</label></h4>
-					      
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">120 Hrs</p>
-
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-				
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/Mobile.jpeg" height="200" alt="Mobile Development + Hybrid" />
-					    </div>
-					   <div class="flip-card-back">					      
-					      <h4><label style="color:#352a6f;">Mobile Development + Hybrid</label></h4>
-					      
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">120 Hrs</p>
-					      
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-
-
-				<div class="col-lg-2">				
-				 <div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-					    <img src="images/offers/UX.jpg" height="200" alt="UX Design (Mobile & Web)" />
-					    </div>
-					   <div class="flip-card-back">					      
-					      <h4><label style="color:#352a6f;">UX Design (Mobile & Web)</label></h4>
-					      
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">Full Online Course</p>
-					      <p style="font-size: 12px;color: blue;font-weight: bold;">60 Hrs</p>
-					      
-					      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openPopupArgs('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_zU3VuHyfkUkLpP4dIUbTr9jjGaG4Ck6Sdwh7g9FEnODSpA/formResponse','entry.880774368','entry.19233910','entry.1392537463','entry.1528537292')">📩Register</button>
-					    </div>
-					  </div>
-				</div>
-				</div>
-
-
-			</div> <!-- Row -->
-				
-		<!-- end divider -->
-		
-	</div>
-	</section>	
-</div>
-
-<footer id="footer" class="top-space">
-		<div class="footer1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-5 panel" style="font-size: 14px">
-						<h4 class="panel-title">Latest News</h4>
-						<div class="panel-body">
-							<ul style="font-size: smaller;">
-								<li>🚀 <strong>New AI Courses</strong> – Launched Gen.AI & OpenAI courses
-									with hands-on projects.</li>
-								<li>🎓 <strong>Internship Program</strong> – Opened internship opportunities in
-									Cybersecurity, AI, and Full Stack Development.</li>
-								<li>🔐 <strong>Identity & Access Management</strong> – Launched new IAM tools & led
-									weekend workshops, boosting adoption & strengthening security.</li>
-								<li>💻 <strong>Java & Spring Workshops</strong> – Conducted Java & Spring Framework
-									workshops, helping developers stay ahead with the latest releases.</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-2 panel" style="font-size: 14px">
-						<h4 class="panel-title">Quick Links</h4>
-						<p><a href="ourstory.htm">Latest Events</a><br>
-							<a href="termsandcond.htm">Terms and conditions</a><br>
-							<a href="privacy.htm">Privacy policy</a><br>
-							<a href="skills.htm">Career</a><br>
-							<a href="contact.htm">Contact us</a>
-						</p>
-					</div>
-					<div class="col-md-3 panel contact" style="font-size: 14px">
-						<h4 class="panel-title"> Contact Info</h4>
-						<div class="panel-body">
-							<!-- <p>Lorem ipsum dolor amet, consectetur adipiscing ipsum dolor.</p> -->
-							<ul>
-								<li><i class="fa fa-phone"></i> +91 90000 35869 &nbsp;<a
-										href="https://wa.me/message/IEJ3MUBFNFSEA1" data-placement="top"
-										title="WhatsApp" target="_blank"><i class="fa_social fa fa-whatsapp"
-											aria-hidden="true" style="font-size:20px;color:white;"></i></li>
-								<li><a href="#"><i class="fa fa-envelope-o"></i> &nbsp;hr@deccanidentity.com</a></li>
-								<li><i class="fa fa-building"></i> Deccan IDentity Software Pvt.Ltd.<br> Hyderabad,
-									Telangana, 501510, India <img src="images/india.png" /></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-2 panel">
-						<h3 class="panel-title">Follow Us</h3>
-						<div class="panel-body">
-							<p class="follow-me-icons">
-								<a href="https://wa.me/message/VYIID6CYVCD7K1" data-placement="top" title="WhatsApp"
-									target="_blank"></a>
-								<i class="fa_social fa fa-whatsapp" aria-hidden="true"></i></a>
-								<!-- style="font-size:36px;color:green" -->
-								<a href="https://www.linkedin.com/in/deccanidentity" data-placement="top"
-									title="Linkedin" target="_blank"><i class="fa_social fa fa-linkedin"></i></a>
-								<a href="https://www.fb.com/deccanidentity" data-placement="top" title="Facebook"
-									target="_blank"><i class="fa_social fa fa-facebook"></i></a>
-								<a href="https://www.instagram.com/deccanidentity_india" data-placement="top"
-									title="Instagram" target="_blank"><i class="fa_social fa fa-instagram"></i></a>
-								<a href="https://x.com/DeccanIdentity" data-placement="top" title="Twitter"
-									target="_blank"><i class="fa_social fa fa-twitter"></i></a>
-								<a href="https://www.youtube.com/@DeccanIdentity" data-placement="top" title="Youtube"
-									target="_blank"><i class="fa_social fa fa-youtube"></i></a>
-								<!--	<a href="https://www.pinterest.com/deccanidentity" data-placement="top"
-									title="Pinterest" target="_blank"><i class="fa_social fa fa-pinterest"></i></a>-->
-							</p>
-
-						</div>
-					</div>
-				</div>
-				<!-- /row of panels -->
-			</div>
-		</div>
-		<div class="footer2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 panel">
-						<div class="panel-body">
-							<p class="simplenav"> <a href="index.html">Home</a> | <a href="ourstory.htm">OurStory</a> |
-								<a href="solutions.htm">Solutions</a> | <a href="technology.htm">IdentityTech</a> | <a
-									href="skills.htm">SkillsHub</a>| <a href="contact.htm">ContactUs</a>
-							</p>
-						</div>
-					</div>
-					<div class="col-md-6 panel">
-						<div class="panel-body">
-							<p class="text-right"> Copyright &copy; 2025 All Rights Reserved. By<a
-									href="http://deccanidentity.com/" target="_blank">DeccanIDentity`</a></p>
-						</div>
-					</div>
-				</div>
-				<!-- /row of panels -->
-			</div>
-		</div>
-	</footer>
-	
-	<!-- Popup -->
-	 <div id="popup" class="popup">
-	   <div class="popup-content">
-	     <button class="close-btn" onclick="closePopup()">✖</button>
-	     <h3>📩 Get in Touch</h3>
-	     <form id="googleForm" class="open-popup-form">
-	       <input type="text" name="name" id="name" placeholder="Full Name" required class="open-popup-input"/>
-	       <input type="email" name="email" id="email" placeholder="Email Id" required  class="open-popup-input" />
-	       <input type="number" name="mobile" id="mobile" placeholder="+91 Phone Number" required class="open-popup-input" />
-	       <textarea name="message" id="message" placeholder="Type your message.." rows="5" required class="open-popup-textarea"></textarea>
-	       <button type="submit" id="submitButton" class="open-popup-button">Send Message</button>
-	       <div class="formstatus" id="formstatus"></div>
-	     </form>
-	   </div>
-	 </div>
-
-<!-- JavaScript libs are placed at the end of the document so the pages load faster --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="js/modernizr-latest.js"></script> 
-<script src="js/jquery.cslider.js"></script> 
-<script src="js/headroom.min.js"></script> 
-<script src="js/jquery.headroom.min.js"></script> 
-<script src="js/custom.js"></script>
-<script src="js/form-popup.js"></script> 
-	
+  <script src="js/modern.js?v=2.9"></script>
+  <script src="js/form-popup.js"></script>
+  <script>
+    // Enable tap-to-flip on touch/mobile devices
+    document.querySelectorAll('.flip-card').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.btn-register-course') || e.target.closest('a')) return;
+        card.classList.toggle('flipped');
+      });
+    });
+  </script>
 </body>
 </html>

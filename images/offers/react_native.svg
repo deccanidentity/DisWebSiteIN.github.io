@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="300" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Orbit Ellipses -->
+  <g transform="translate(200, 130)" filter="url(#softGlow)">
+    <ellipse rx="95" ry="34" fill="none" stroke="#00d8ff" stroke-width="8" stroke-linecap="round" transform="rotate(0)"/>
+    <ellipse rx="95" ry="34" fill="none" stroke="#0284c7" stroke-width="8" stroke-linecap="round" transform="rotate(60)"/>
+    <ellipse rx="95" ry="34" fill="none" stroke="#0369a1" stroke-width="8" stroke-linecap="round" transform="rotate(120)"/>
+    <!-- Nucleus Core -->
+    <circle r="16" fill="#00d8ff"/>
+    <circle r="8" fill="#ffffff"/>
+  </g>
+  
+  <!-- Label -->
+  <text x="200" y="245" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="24" font-weight="800" fill="#0f172a" text-anchor="middle" letter-spacing="-0.5">REACT NATIVE</text>
+  <text x="200" y="272" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#0284c7" text-anchor="middle" letter-spacing="1">MOBILE APPS</text>
+</svg>

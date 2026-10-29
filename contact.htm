@@ -1,318 +1,1172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DeccanIDentity delivers secure enterprise solutions in web & mobile development, AI-powered identity access management, and cybersecurity with 24×7 expert support">
-<meta name="author" content="https://deccanidentity.com/">
-<title>DeccanIDentity-ContactUs</title>
-<link rel="icon" type="image/png" href="images/Logo.png">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/flexslider.css"/>
-<!-- Custom styles for our template -->
-<link rel="stylesheet" href="css/bootstrap-theme.css" media="screen" >
-<link rel="stylesheet" type="text/css" href="css/da-slider.css" />
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/deccan-identity.css">
-<link rel="stylesheet" href="css/form-popup.css">
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | DeccanIDentity</title>
+  <meta name="description" content="Get in touch with DeccanIDentity Software Pvt. Ltd. for enterprise cybersecurity, IAM, web and mobile application inquiries. Offices in Hyderabad, Ongole, and Tirupati.">
+  <link rel="canonical" href="https://deccanidentity.com/contact.htm">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/modern.css?v=2.9">
+  <style>
+    /* Modern Contact Page Layout & Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    /* Hero Quick Contact Bar */
+    .hero-quick-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .quick-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s ease;
+    }
+    .quick-chip:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(37, 99, 235, 0.12);
+    }
+    .quick-chip.chip-wa {
+      color: #15803d;
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+    .quick-chip.chip-wa:hover {
+      border-color: #22c55e;
+      background: #dcfce7;
+      color: #166534;
+      box-shadow: 0 6px 14px rgba(34, 197, 94, 0.16);
+    }
+
+    /* Contact Form Card */
+    .contact-card-box {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 2.25rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+      position: relative;
+    }
+    .form-header-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .form-header-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-md);
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+    .form-header-group h2 {
+      font-size: 1.5rem;
+      color: #0f172a;
+      margin: 0;
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
+    .form-subtitle {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.75rem;
+      line-height: 1.5;
+    }
+
+    /* Form Fields with Icon Accents */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-bottom: 0.45rem;
+      color: #334155;
+    }
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-icon {
+      position: absolute;
+      left: 1rem;
+      color: #94a3b8;
+      font-size: 0.95rem;
+      pointer-events: none;
+      transition: color 0.2s ease;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.82rem 1rem 0.82rem 2.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 0.95rem; /* 16px minimum prevents iOS zoom */
+      color: #0f172a;
+      transition: var(--transition);
+      background: #f8fafc;
+    }
+    .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #0f172a;
+      transition: var(--transition);
+      background: #f8fafc;
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 4px var(--primary-light);
+    }
+    .form-input:focus + .input-icon,
+    .input-wrapper:focus-within .input-icon {
+      color: var(--primary);
+    }
+    .form-status {
+      margin-top: 1rem;
+      padding: 0.85rem 1.1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.90rem;
+      display: none;
+      line-height: 1.5;
+    }
+    .form-status.success {
+      display: block;
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+    .form-status.error {
+      display: block;
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+    }
+
+    /* Branch Office Cards */
+    .branch-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1.15rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+    }
+    .branch-card:hover {
+      border-color: rgba(37, 99, 235, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+    }
+    .branch-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.55rem;
+      flex-wrap: wrap;
+    }
+    .branch-title {
+      font-size: 1.05rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .branch-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+    }
+    .branch-badge.badge-hq {
+      background: #eff6ff;
+      color: var(--primary);
+      border: 1px solid #bfdbfe;
+    }
+    .branch-badge.badge-branch {
+      background: #f0fdfa;
+      color: #0d9488;
+      border: 1px solid #99f6e4;
+    }
+    .branch-address {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .branch-timing {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.80rem;
+      color: #64748b;
+      margin-bottom: 0.85rem;
+      background: #f8fafc;
+      padding: 0.35rem 0.65rem;
+      border-radius: var(--radius-sm);
+      width: fit-content;
+    }
+
+    /* Branch Action Pills (Thumb-friendly touch buttons) */
+    .branch-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #f1f5f9;
+    }
+    .action-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.52rem 0.85rem;
+      border-radius: var(--radius-md);
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+    }
+    .action-pill:hover {
+      background: #ffffff;
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+    .action-pill.pill-call {
+      color: #0369a1;
+      background: #f0f9ff;
+      border-color: #bae6fd;
+    }
+    .action-pill.pill-call:hover {
+      background: #e0f2fe;
+      border-color: #7dd3fc;
+      color: #0284c7;
+    }
+    .action-pill.pill-wa {
+      color: #15803d;
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+    .action-pill.pill-wa:hover {
+      background: #dcfce7;
+      border-color: #86efac;
+      color: #166534;
+    }
+    .action-pill.pill-email {
+      color: #7c3aed;
+      background: #faf5ff;
+      border-color: #e9d5ff;
+    }
+    .action-pill.pill-email:hover {
+      background: #f3e8ff;
+      border-color: #d8b4fe;
+      color: #6d28d9;
+    }
+    .action-pill.pill-map {
+      color: #475569;
+    }
+
+    /* WhatsApp Support Banner Card */
+    .whatsapp-support-card {
+      margin-top: 1.25rem;
+      background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.4rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+      transition: all 0.3s ease;
+    }
+    .whatsapp-support-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+      color: #ffffff;
+    }
+    .wa-card-content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .wa-card-icon {
+      font-size: 2.2rem;
+      line-height: 1;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    }
+    .wa-card-text h5 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0 0 0.2rem;
+      color: #ffffff;
+    }
+    .wa-card-text p {
+      font-size: 0.82rem;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.92);
+      line-height: 1.35;
+    }
+    .wa-card-arrow {
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.2);
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+    .whatsapp-support-card:hover .wa-card-arrow {
+      transform: translateX(4px);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Google Maps Container */
+    .map-wrapper {
+      margin-top: 2.5rem;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+    .map-header {
+      padding: 1.15rem 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid #f1f5f9;
+      background: #f8fafc;
+      flex-wrap: wrap;
+    }
+    .map-title {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0;
+    }
+    .map-subtext {
+      font-size: 0.82rem;
+      color: #64748b;
+      margin: 0;
+    }
+    .map-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .map-link-btn:hover {
+      text-decoration: underline;
+    }
+    .map-container {
+      height: 340px;
+      width: 100%;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 991px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .contact-card-box {
+        padding: 1.35rem 1.15rem;
+        border-radius: var(--radius-lg);
+      }
+      .form-header-group h2 {
+        font-size: 1.3rem;
+      }
+      .form-header-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.15rem;
+      }
+      .hero-quick-chips {
+        flex-direction: column;
+        width: 100%;
+      }
+      .quick-chip {
+        width: 100%;
+        justify-content: center;
+      }
+      .branch-card {
+        padding: 1.15rem 1rem;
+      }
+      .branch-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.45rem;
+      }
+      .action-pill {
+        width: 100%;
+        font-size: 0.80rem;
+        padding: 0.55rem 0.5rem;
+      }
+      .branch-actions .pill-email,
+      .branch-actions .pill-map {
+        grid-column: span 1;
+      }
+      .branch-actions .action-pill:nth-child(3):last-child {
+        grid-column: 1 / -1;
+      }
+      .whatsapp-support-card {
+        padding: 1rem 1.15rem;
+      }
+      .wa-card-icon {
+        font-size: 1.8rem;
+      }
+      .wa-card-text h5 {
+        font-size: 0.95rem;
+      }
+      .wa-card-text p {
+        font-size: 0.78rem;
+      }
+      .wa-card-arrow {
+        display: none;
+      }
+      .map-header {
+        padding: 1rem 1.15rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .map-container {
+        height: 260px;
+      }
+      /* Extra bottom padding to clear floating WhatsApp and AI widgets */
+      .section-padding {
+        padding-bottom: 95px !important;
+      }
+    }
+  </style>
 </head>
-
 <body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<img src="images/Logo.png" alt="DeccanIDentity Logo" height="33" width="33"/>
-				<img src="images/logoname.png" alt="DeccanIDentity Logo Text" class="logo-text" height="35"/>			
-			</div>
-			<div class="navbar-collapse collapse">
-		      <ul class="nav navbar-nav pull-right">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="ourstory.htm">OurStory</a></li>
-				<li><a href="solutions.htm">Solutions</a></li>
-				<li><a href="technology.htm">IdentityTech</a></li>
-				<li><a href="skills.htm">SkillsHub</a></li>
-				<li class="active"><a href="contact.htm">ContactUs</a></li>
-		      </ul>
-		    </div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
 
-	<header id="head" class="secondary"></header>
+  <!-- Reading Scroll Progress Indicator -->
+  <div class="site-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-	<!-- container -->
-	<div class="container">
+  <!-- Sticky Enterprise Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-modern nav-container">
+      <a href="index.html" class="brand-wrapper" title="DeccanIDentity - Home">
+        <img src="images/Logo.png" alt="DeccanIDentity Logo" class="brand-logo-img">
+        <img src="images/logoname.png" alt="DeccanIDentity" class="brand-name-img">
+      </a>
 
-		<div class="row">
-			
-			<!-- Article main content -->
-			<article class="col-sm-9 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">Contact Us</h1>
-				</header>
-				
-				<h4 style="color: #2c3e50;">📩 Get in Touch with Us</h4>
-				<p>
-				   Every successful partnership begins with a conversation.Please share your <strong>Name, Email, Mobile Number, and Query</strong> using the form below, 
-				   and our team will get back to you within <strong>1–2 business days</strong>.
-				 </p>
-				<form id="contactForm">
-				      <input type="text" name="name" id="name" placeholder="Full Name" required />
-				      <input type="email" name="email" id="email" placeholder="Email Id " required />
-					  <input type="number" name="mobile" id="mobile" placeholder="+91 Phone Number" required />
-				      <textarea name="message" id="message" placeholder="Type your message.." rows="5" required></textarea>
-				      <button type="submit" id="submitBtn">Send Message</button>
-					  <div class="formstatus" id="formstatus"></div>
-			    </form>		
-			</article>
-			<!-- /Article -->
-			
-			<!-- Sidebar -->
-			<aside class="col-sm-3 sidebar sidebar-right">
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
 
-				<div class="panel contact">
-					<h4>&nbsp;<b>Registred Office Address</b></h4>
-					<hr>
-					<ul>
-						  <li><i class="fa fa-building"></i> Deccan IDentity Software Pvt.Ltd. Adibatla, Hyderabad, Telangana, 501510, India <img src="images/india.png" alt="India Flag"/></li>
+      <!-- Navigation Links & Mega Dropdowns -->
+      <nav class="nav-navigation" aria-label="Primary Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-link-item"><a href="index.html">Home</a></li>
+          <li class="nav-link-item"><a href="ourstory.htm">Our Story</a></li>
+          
+          <!-- Solutions Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="solutions.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown solutions-dropdown" role="region" aria-label="Solutions Overview">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Enterprise Capabilities</span>
+                  <div class="mega-items-grid">
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-shield-halved"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Zero-Trust IAM Engineering</span>
+                        <span class="mega-item-desc">PingFederate, Okta, ForgeRock & CyberArk</span>
+                      </div>
+                    </a>
 
-						  <li><i class="fa fa-phone"></i> +91 90000 35869 &nbsp;<a href="https://wa.me/message/IEJ3MUBFNFSEA1" data-placement="top" title="WhatsApp" target="_blank" ><i
-						        class="fa_social fa fa-whatsapp"  aria-hidden="true" style="font-size:18px;color:green" ></i></a>
-						  </li>
-                          <li><a href="#"><i class="fa fa-envelope-o"></i> &nbsp;info@deccanidentity.com</a></li>
-				   </ul> 
-				   <br>				
-				   <h4>&nbsp;<b>Branch Office</b></h4>
-   					<hr>
-   					<ul>
-						  <li><i class="fa fa-building"></i> Gupta's midtown, Ongole, Andhra Pradesh, 523001, India <img src="images/india.png" alt="India Flag"/></li>
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-cloud"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Cloud & AI Web Platforms</span>
+                        <span class="mega-item-desc">High-concurrency microservices & Next.js SaaS</span>
+                      </div>
+                    </a>
 
-   						  <li><i class="fa fa-phone"></i> +91 94947 65679 &nbsp;<a href="https://wa.me/919494765679" data-placement="top" title="WhatsApp" target="_blank" ><i
-   						        class="fa_social fa fa-whatsapp"  aria-hidden="true" style="font-size:18px;color:green" ></i></a>
-   						  </li>
-   				   </ul> 
-				   <hr>
-   					<ul>
-						  <li><i class="fa fa-building"></i> Mangalam, Tirupati, Andhra Pradesh, 517501, India <img src="images/india.png" alt="India Flag"/></li>
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Mobile Systems</span>
+                        <span class="mega-item-desc">Native iOS, Android & React Native apps</span>
+                      </div>
+                    </a>
 
-   						  <li><i class="fa fa-phone"></i> +91 90000 35869 &nbsp;<a href="https://wa.me/message/IEJ3MUBFNFSEA1" data-placement="top" title="WhatsApp" target="_blank" ><i
-   						        class="fa_social fa fa-whatsapp"  aria-hidden="true" style="font-size:18px;color:green" ></i></a>
-   						  </li>
-   				   </ul> 
-				</div>
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-robot"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise AI & Automation</span>
+                        <span class="mega-item-desc">Intelligent agents, LLM pipelines & 24/7 SLA</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
 
-			</aside>
-			<!-- /Sidebar -->
+                <div class="mega-col-featured">
+                  <div class="mega-featured-card">
+                    <div class="featured-badge">
+                      <span class="live-dot-ping"></span> Live Showcases
+                    </div>
+                    <h4 class="featured-title">Interactive Enterprise Demos</h4>
+                    <p class="featured-desc">Explore ready-to-deploy enterprise web portals and native mobile experiences.</p>
+                    <div class="featured-links">
+                      <a href="https://demo.deccanidentity.in/" target="_blank" class="featured-link-pill cyan">
+                        <span><i class="fa-solid fa-laptop-code"></i> Websites (100+)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                      <a href="https://apps.deccanidentity.in/" target="_blank" class="featured-link-pill purple">
+                        <span><i class="fa-solid fa-mobile-screen-button"></i> Mobile Apps</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
 
-		</div>
-	</div>	<!-- /container -->
-	
-	<section class="container-full top-space">		  
-		   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-				<div id="gmap_canvas" style="width:100%;height:250px;"></div>
-				
-				<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>				
-				
-				<script type="text/javascript"> 
-				function init_map()
-				{
-				var myOptions = {zoom:14,center:new google.maps.LatLng(17.233565709347605, 78.542557909514148),mapTypeId: google.maps.MapTypeId.ROADMAP};
-				map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-				marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(17.233565709347605, 78.542557909514148)});
-				infowindow = new google.maps.InfoWindow({content:"<b> Hyderabad,</b><br>Telangana,501510,<br/>India." });
-				google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
-				infowindow.open(map,marker);
-				}
-				
-				google.maps.event.addDomListener(window, 'load', init_map);		
-						    
-				</script>
-	</section>
+          <!-- Identity Tech Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="technology.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Identity Tech</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown tech-dropdown" role="region" aria-label="Identity Technology Pillars">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Architecture Pillars</span>
+                  <div class="mega-items-grid">
+                    <a href="technology.htm#verification" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Continuous Verification</span>
+                        <span class="mega-item-desc">Zero-Trust adaptive posture & context checks</span>
+                      </div>
+                    </a>
 
-	
-	<footer id="footer" class="top-space">
-			<div class="footer1">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-5 panel" style="font-size: 14px">
-							<h4 class="panel-title">Latest News</h4>
-							<div class="panel-body">
-								<ul style="font-size: smaller;">
-									<li>🚀 <strong>New AI Courses</strong> – Launched Gen.AI & OpenAI courses
-										with hands-on projects.</li>
-									<li>🎓 <strong>Internship Program</strong> – Opened internship opportunities in
-										Cybersecurity, AI, and Full Stack Development.</li>
-									<li>🔐 <strong>Identity & Access Management</strong> – Launched new IAM tools & led
-										weekend workshops, boosting adoption & strengthening security.</li>
-									<li>💻 <strong>Java & Spring Workshops</strong> – Conducted Java & Spring Framework
-										workshops, helping developers stay ahead with the latest releases.</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2 panel" style="font-size: 14px">
-							<h4 class="panel-title">Quick Links</h4>
-							<p><a href="ourstory.htm">Latest Events</a><br>
-								<a href="termsandcond.htm">Terms and conditions</a><br>
-								<a href="privacy.htm">Privacy policy</a><br>
-								<a href="skills.htm">Career</a><br>
-								<a href="contact.htm">Contact us</a>
-							</p>
-						</div>
-						<div class="col-md-3 panel contact" style="font-size: 14px">
-							<h4 class="panel-title"> Contact Info</h4>
-							<div class="panel-body">
-								<ul>
-									<li><i class="fa fa-phone"></i> +91 90000 35869 &nbsp;<a
-											href="https://wa.me/message/IEJ3MUBFNFSEA1" data-placement="top"
-											title="WhatsApp" target="_blank"><i class="fa_social fa fa-whatsapp"
-												aria-hidden="true" style="font-size:20px;color:white;"></i></li>
-									<li><a href="#"><i class="fa fa-envelope-o"></i> &nbsp;hr@deccanidentity.com</a></li>
-									<li><i class="fa fa-building"></i> Deccan IDentity Software Pvt.Ltd.<br> Hyderabad,
-										Telangana, 501510, India <img src="images/india.png" alt="India Flag"/></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2 panel">
-							<h3 class="panel-title">Follow Us</h3>
-							<div class="panel-body">
-								<p class="follow-me-icons">
-									<a href="https://wa.me/message/VYIID6CYVCD7K1" data-placement="top" title="WhatsApp"
-										target="_blank"></a>
-									<i class="fa_social fa fa-whatsapp" aria-hidden="true"></i></a>
-									<a href="https://www.linkedin.com/in/deccanidentity" data-placement="top"
-										title="Linkedin" target="_blank"><i class="fa_social fa fa-linkedin"></i></a>
-									<a href="https://www.fb.com/deccanidentity" data-placement="top" title="Facebook"
-										target="_blank"><i class="fa_social fa fa-facebook"></i></a>
-									<a href="https://www.instagram.com/deccanidentity_india" data-placement="top"
-										title="Instagram" target="_blank"><i class="fa_social fa fa-instagram"></i></a>
-									<a href="https://x.com/DeccanIdentity" data-placement="top" title="Twitter"
-										target="_blank"><i class="fa_social fa fa-twitter"></i></a>
-									<a href="https://www.youtube.com/@DeccanIdentity" data-placement="top" title="Youtube"
-										target="_blank"><i class="fa_social fa fa-youtube"></i></a>
-								
-								</p>
+                    <a href="technology.htm#access" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-key"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Privileged Access (PAM)</span>
+                        <span class="mega-item-desc">CyberArk, HashiCorp Vault & session audits</span>
+                      </div>
+                    </a>
 
-							</div>
-						</div>
-					</div>
-					<!-- /row of panels -->
-				</div>
-			</div>
-			<div class="footer2">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 panel">
-							<div class="panel-body">
-								<p class="simplenav"> <a href="index.html">Home</a> | <a href="ourstory.htm">OurStory</a> |
-									<a href="solutions.htm">Solutions</a> | <a href="technology.htm">IdentityTech</a> | <a
-										href="skills.htm">SkillsHub</a>| <a href="contact.htm">ContactUs</a>
-								</p>
-							</div>
-						</div>
-						<div class="col-md-6 panel">
-							<div class="panel-body">
-								<p class="text-right"> Copyright &copy; 2025 All Rights Reserved. By<a
-										href="http://deccanidentity.com/" target="_blank">DeccanIDentity`</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- /row of panels -->
-				</div>
-			</div>
-		</footer>
+                    <a href="technology.htm#authentication" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-fingerprint"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">SSO, SAML & OIDC</span>
+                        <span class="mega-item-desc">Federated SSO, Passkeys & adaptive MFA</span>
+                      </div>
+                    </a>
 
-<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="js/modernizr-latest.js"></script> 
-<script src="js/jquery.cslider.js"></script> 
-<script src="js/headroom.min.js"></script> 
-<script src="js/jquery.headroom.min.js"></script> 
-<script src="js/custom.js"></script>
+                    <a href="technology.htm#management" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-users-gear"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Automated SCIM & Governance</span>
+                        <span class="mega-item-desc">Identity lifecycle, compliance & audit trails</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
 
-<!-- Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-<script src="js/google-map.js"></script>
+                <div class="mega-col-featured">
+                  <div class="mega-tech-card">
+                    <div class="tech-card-pill">
+                      <i class="fa-solid fa-certificate"></i> Certified Lead
+                    </div>
+                    <h4 class="featured-title">PingFederate & Okta Specialists</h4>
+                    <p class="featured-desc">Certified engineering leads implementing fault-tolerant federated SSO architectures with 99.99% uptime.</p>
+                    <a href="technology.htm" class="tech-cta-link">
+                      Explore Architecture <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
 
-<script>
-	// Get a reference to the form and the status div
-	const customForm = document.getElementById('contactForm');
-	const formStatus = document.getElementById('formstatus');
-	const submitBtn = document.getElementById('submitBtn');
- 
-	//const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScz.../formResponse";
-	const googleFormUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse";
+          <!-- Skills Hub Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="skills.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Skills Hub</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown skills-dropdown" role="region" aria-label="Skills & Programs">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Programs & Bootcamps</span>
+                  <div class="mega-items-grid">
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-user-graduate"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Live Internship</span>
+                        <span class="mega-item-desc">Hands-on live software delivery & mentoring</span>
+                      </div>
+                    </a>
 
-	// IMPORTANT: Replace these with the actual "entry.XXXX" IDs from your Google Form
-	const formFieldIDs = {
-	    name: "entry.1820924",
-	    email: "entry.1869323879",
-		mobile: "entry.1277797673",
-	    message: "entry.665800355"
-	};
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-user-shield"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Cybersecurity & IAM Track</span>
+                        <span class="mega-item-desc">PingFederate, Okta, CyberArk & SailPoint labs</span>
+                      </div>
+                    </a>
 
-customForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-	
-	// Disable the button and show a loading message
-    submitBtn.disabled = true;
-    formStatus.innerHTML = "Submitting...";
-    formStatus.className = "";
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-code"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Fullstack Cloud Engineering</span>
+                        <span class="mega-item-desc">React, Next.js, Node, Java & AWS Microservices</span>
+                      </div>
+                    </a>
 
-    // Get the form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-	const mobile = document.getElementById('mobile').value;
-    const message = document.getElementById('message').value;
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-brain"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Applied AI & Machine Learning</span>
+                        <span class="mega-item-desc">LLMs, Agentic AI, PyTorch & Data Pipelines</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
 
-    // Create a new URLSearchParams object to build the data payload
-    const formData = new URLSearchParams();
-    formData.append(formFieldIDs.name, name);
-    formData.append(formFieldIDs.email, email);
-	formData.append(formFieldIDs.mobile, mobile);
-    formData.append(formFieldIDs.message, message);    
-	
-	// Use the fetch API to send the data to Google Forms
-    fetch(googleFormUrl, {
-        method: 'POST',
-        mode: 'no-cors', // Important for cross-origin requests to Google Forms
-        body: formData
-    })
-    .then(response => {
-        // Since we are using `no-cors`, the response object is opaque and we can't
-        // check for success in the traditional way. A successful fetch()
-        // call itself means the data was sent without network errors.
-        // We'll assume success if the fetch promise resolves.
-        formStatus.innerHTML = "Thank you! Your message sent successfully!.";
-        formStatus.className = "success";
-        customForm.reset(); // Clear the form fields
-    })
-    .catch(error => {
-        // This catch block will only run for network errors, not for Google Form's
-        // internal errors (which we can't see with no-cors).
-        console.error('Error:', error);
-        formStatus.innerHTML = "There was an error. Please try again.";
-        formStatus.className = "error";
-    })
-    .finally(() => {
-        // Re-enable the submit button after a short delay to give user feedback
-        setTimeout(() => {
+                <div class="mega-col-featured">
+                  <div class="mega-skills-card">
+                    <div class="featured-badge skills-badge">
+                      <i class="fa-solid fa-bolt"></i> Enrollment Open
+                    </div>
+                    <h4 class="featured-title">Accelerate Your Engineering Career</h4>
+                    <p class="featured-desc">Cohort-based learning with real code reviews, practical repos & certification guidance.</p>
+                    <a href="skills.htm#popup" class="btn-modern btn-modern-primary btn-modern-sm w-100" style="justify-content: center;">
+                      <i class="fa-solid fa-pen-to-square"></i> Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Contact Us (Active) -->
+          <li class="nav-link-item active"><a href="contact.htm">Contact Us</a></li>
+
+          <!-- Mobile Drawer Footer & Actions -->
+          <li class="mobile-drawer-actions">
+            <div class="mobile-drawer-grid">
+              <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm" title="Website Templates & Live Showcases">
+                <i class="fa-solid fa-laptop-code"></i> Websites
+              </a>
+              <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm" title="Mobile & Cloud App Showcases">
+                <i class="fa-solid fa-mobile-screen-button"></i> Apps
+              </a>
+            </div>
+            <a href="https://wa.me/918186035869" target="_blank" class="btn-modern btn-whatsapp btn-modern-sm" style="width: 100%; justify-content: center;">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+91 81860 35869)
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions">
+        <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm" title="Website Templates & Live Showcases">
+          <i class="fa-solid fa-laptop-code"></i> Websites
+        </a>
+        <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm" title="Mobile & Cloud App Showcases">
+          <i class="fa-solid fa-mobile-screen-button"></i> Apps
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container-modern">
+      <span class="section-pill">Let's Connect</span>
+      <h1 class="hero-title" style="margin-bottom: 0.75rem;">Contact DeccanIDentity</h1>
+      <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 680px; margin: 0 auto;">
+        Every successful partnership begins with a conversation. Share your requirements and our engineering team will respond within 1-2 business days.
+      </p>
+
+      <!-- Quick Contact Touch Chips -->
+      <div class="hero-quick-chips">
+        <a href="tel:+919000035869" class="quick-chip" title="Call Hyderabad Headquarters">
+          <i class="fa-solid fa-phone" style="color: var(--primary);"></i> +91 90000 35869
+        </a>
+        <a href="https://wa.me/918186035869" target="_blank" class="quick-chip chip-wa" title="Instant WhatsApp Support">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp (+91 81860 35869)
+        </a>
+        <a href="mailto:info@deccanidentity.com" class="quick-chip" title="Corporate Email Inquiries">
+          <i class="fa-solid fa-envelope" style="color: var(--secondary);"></i> info@deccanidentity.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Contact Content -->
+  <section class="section-padding" style="padding-top: 40px;">
+    <div class="container-modern">
+      <div class="contact-grid">
+        <!-- Contact Form Box -->
+        <div class="contact-card-box">
+          <div class="form-header-group">
+            <div class="form-header-icon">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <div>
+              <h2>Send Us a Message</h2>
+              <div style="font-size: 0.80rem; color: #16a34a; font-weight: 600; display: flex; align-items: center; gap: 0.35rem; margin-top: 0.2rem;">
+                <i class="fa-solid fa-shield-halved"></i> 256-bit Encrypted &bull; Response within 24-48 hrs
+              </div>
+            </div>
+          </div>
+          <p class="form-subtitle">
+            Please fill out your details below. Our solutions engineering team will review your requirements under strict confidentiality.
+          </p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="name">Full Name *</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-user input-icon"></i>
+                <input type="text" name="name" id="name" class="form-input" placeholder="e.g. Rahul Sharma" autocomplete="name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Corporate Email *</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-envelope input-icon"></i>
+                <input type="email" name="email" id="email" class="form-input" placeholder="e.g. rahul@company.com" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="mobile">Mobile Number (+91) *</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-phone input-icon"></i>
+                <input type="tel" name="mobile" id="mobile" class="form-input" placeholder="e.g. +91 98765 43210" autocomplete="tel" inputmode="tel" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">How can we help you? *</label>
+              <textarea name="message" id="message" rows="5" class="form-textarea" placeholder="Tell us about your project, IAM architecture, web/mobile app requirements, or training inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-modern btn-modern-primary" style="width: 100%; justify-content: center; padding: 0.85rem 1.5rem; font-size: 1rem;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+
+            <div class="form-status" id="formstatus"></div>
+          </form>
+        </div>
+
+        <!-- Sidebar / Office Information -->
+        <div>
+          <!-- Registered Corporate Office -->
+          <div class="branch-card">
+            <div class="branch-header">
+              <h4 class="branch-title">
+                <i class="fa-solid fa-building-shield" style="color: var(--primary);"></i>
+                Corporate Headquarters
+              </h4>
+              <span class="branch-badge badge-hq"><i class="fa-solid fa-star"></i> HQ</span>
+            </div>
+            <p class="branch-address">
+              <strong>Deccan IDentity Software Pvt. Ltd.</strong><br>
+              Adibatla, Hyderabad, Telangana, 501510, India
+            </p>
+            <div class="branch-timing">
+              <i class="fa-regular fa-clock"></i> Mon - Sat: 9:30 AM - 6:30 PM IST
+            </div>
+            <div class="branch-actions">
+              <a href="tel:+919000035869" class="action-pill pill-call" title="Call Hyderabad HQ">
+                <i class="fa-solid fa-phone"></i> +91 90000 35869
+              </a>
+              <a href="https://wa.me/918186035869" target="_blank" class="action-pill pill-wa" title="WhatsApp Hyderabad HQ">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="mailto:info@deccanidentity.com" class="action-pill pill-email" title="Email Inquiries">
+                <i class="fa-solid fa-envelope"></i> Email
+              </a>
+              <a href="https://maps.google.com/?q=Adibatla+Hyderabad+Telangana+501510" target="_blank" class="action-pill pill-map" title="View on Google Maps">
+                <i class="fa-solid fa-location-arrow"></i> Map
+              </a>
+            </div>
+          </div>
+
+          <!-- Ongole Branch -->
+          <div class="branch-card">
+            <div class="branch-header">
+              <h4 class="branch-title">
+                <i class="fa-solid fa-location-dot" style="color: var(--accent-cyan);"></i>
+                Ongole Branch Office
+              </h4>
+              <span class="branch-badge badge-branch">Branch</span>
+            </div>
+            <p class="branch-address">
+              Gupta's Midtown, Ongole,<br>
+              Andhra Pradesh, 523001, India
+            </p>
+            <div class="branch-timing">
+              <i class="fa-regular fa-clock"></i> Mon - Sat: 9:30 AM - 6:30 PM IST
+            </div>
+            <div class="branch-actions">
+              <a href="tel:+919494765679" class="action-pill pill-call" title="Call Ongole Branch">
+                <i class="fa-solid fa-phone"></i> +91 94947 65679
+              </a>
+              <a href="https://wa.me/918186035869" target="_blank" class="action-pill pill-wa" title="WhatsApp Ongole Branch">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="https://maps.google.com/?q=Gupta's+Midtown+Ongole+Andhra+Pradesh" target="_blank" class="action-pill pill-map" title="View on Google Maps">
+                <i class="fa-solid fa-location-arrow"></i> Map
+              </a>
+            </div>
+          </div>
+
+          <!-- Tirupati Branch -->
+          <div class="branch-card">
+            <div class="branch-header">
+              <h4 class="branch-title">
+                <i class="fa-solid fa-location-dot" style="color: var(--accent-emerald);"></i>
+                Tirupati Branch Office
+              </h4>
+              <span class="branch-badge badge-branch">Branch</span>
+            </div>
+            <p class="branch-address">
+              Mangalam, Tirupati,<br>
+              Andhra Pradesh, 517501, India
+            </p>
+            <div class="branch-timing">
+              <i class="fa-regular fa-clock"></i> Mon - Sat: 9:30 AM - 6:30 PM IST
+            </div>
+            <div class="branch-actions">
+              <a href="tel:+919000035869" class="action-pill pill-call" title="Call Tirupati Branch">
+                <i class="fa-solid fa-phone"></i> +91 90000 35869
+              </a>
+              <a href="https://wa.me/918186035869" target="_blank" class="action-pill pill-wa" title="WhatsApp Tirupati Branch">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="https://maps.google.com/?q=Mangalam+Tirupati+Andhra+Pradesh" target="_blank" class="action-pill pill-map" title="View on Google Maps">
+                <i class="fa-solid fa-location-arrow"></i> Map
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Connect on WhatsApp Support Banner Card -->
+          <a href="https://wa.me/918186035869" target="_blank" class="whatsapp-support-card" title="Chat Directly on WhatsApp">
+            <div class="wa-card-content">
+              <div class="wa-card-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="wa-card-text">
+                <h5>Immediate Support on WhatsApp</h5>
+                <p>Chat directly with our solutions architects &bull; Avg reply in 15 mins</p>
+              </div>
+            </div>
+            <div class="wa-card-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Google Maps Embed Wrapper -->
+      <div class="map-wrapper">
+        <div class="map-header">
+          <div>
+            <h4 class="map-title">
+              <i class="fa-solid fa-map-location-dot" style="color: var(--primary);"></i>
+              Hyderabad Corporate Headquarters Location
+            </h4>
+            <p class="map-subtext">Adibatla IT Aerospace & Tech Corridor, Hyderabad, Telangana, 501510</p>
+          </div>
+          <a href="https://maps.google.com/?q=Adibatla+Hyderabad+Telangana+501510" target="_blank" class="map-link-btn">
+            Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://maps.google.com/maps?q=Adibatla%20Hyderabad%20Telangana%20501510&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            title="DeccanIDentity Hyderabad Location"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container-modern">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="footer-brand-badge">
+            <img src="images/Logo.png" alt="DeccanIDentity Logo" class="footer-brand-logo-img">
+            <img src="images/logoname.png" alt="DeccanIDentity" class="footer-brand-name-img">
+          </div>
+          <p style="color: rgba(255, 255, 255, 0.95); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            DeccanIDentity delivers Zero-Trust IAM, full-stack AI web engineering, and enterprise mobility solutions with 24x7 expert support.
+          </p>
+          <div class="social-links">
+            <a href="https://wa.me/918186035869" target="_blank" class="social-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/deccanidentity" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.fb.com/deccanidentity" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/deccanidentity_india" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/DeccanIdentity" target="_blank" class="social-btn" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@DeccanIdentity" target="_blank" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ourstory.htm">Our Story & About</a></li>
+            <li><a href="solutions.htm">Enterprise Solutions</a></li>
+            <li><a href="technology.htm">Identity Technologies</a></li>
+            <li><a href="skills.htm">Skills Hub & Careers</a></li>
+            <li><a href="https://demo.deccanidentity.in/" target="_blank">Websites (Templates) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
+            <li><a href="https://apps.deccanidentity.in/" target="_blank">Apps (Mobile & Cloud) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
+            <li><a href="contact.htm">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.htm">Zero-Trust IAM Security</a></li>
+            <li><a href="solutions.htm">Okta & PingFederate Solutions</a></li>
+            <li><a href="solutions.htm">AI & Web Development</a></li>
+            <li><a href="solutions.htm">Mobile App Engineering</a></li>
+            <li><a href="skills.htm">Internship Programs</a></li>
+            <li><a href="privacy.htm">Privacy Policy</a></li>
+            <li><a href="termsandcond.htm">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Office Locations</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Registered Office:</strong><br>
+                DeccanIDentity Software Pvt. Ltd.<br>
+                Adibatla, Hyderabad, Telangana, 501510, India
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <a href="tel:+919000035869" style="color: #cbd5e1;">+91 90000 35869</a> / 
+                <a href="tel:+919494765679" style="color: #cbd5e1;">+91 94947 65679</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <a href="mailto:info@deccanidentity.com" style="color: #cbd5e1;">info@deccanidentity.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container-modern">
+        <div class="footer-bottom-flex">
+          <div>
+            &copy; <span id="currentYear" class="current-year">2026</span> <strong>DeccanIDentity Software Pvt. Ltd.</strong> All Rights Reserved.
+          </div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="privacy.htm" style="color: rgba(255, 255, 255, 0.85);">Privacy Policy</a>
+            <a href="termsandcond.htm" style="color: rgba(255, 255, 255, 0.85);">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <a href="https://wa.me/918186035869" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="floating-whatsapp__tooltip"><span class="floating-whatsapp__tooltip-dot" aria-hidden="true"></span> WhatsApp</span>
+    </a>
+  </div>
+
+  <script src="js/modern.js?v=2.9"></script>
+
+  <!-- Google Forms Contact Submission Script -->
+  <script>
+    const customForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formstatus');
+    const submitBtn = document.getElementById('submitBtn');
+
+    const googleFormUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLFsNhMY7WT38WEOy5Yji-X1hL8iWfE7AHMIjEpbyctwsPfQ/formResponse";
+
+    const formFieldIDs = {
+      name: "entry.1820924",
+      email: "entry.1869323879",
+      mobile: "entry.1277797673",
+      message: "entry.665800355"
+    };
+
+    if (customForm) {
+      customForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        submitBtn.disabled = true;
+        formStatus.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting your message...';
+        formStatus.className = "form-status";
+        formStatus.style.display = "block";
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const mobile = document.getElementById('mobile').value;
+        const message = document.getElementById('message').value;
+
+        const formData = new URLSearchParams();
+        formData.append(formFieldIDs.name, name);
+        formData.append(formFieldIDs.email, email);
+        formData.append(formFieldIDs.mobile, mobile);
+        formData.append(formFieldIDs.message, message);    
+        
+        try {
+          await fetch(googleFormUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formData
+          });
+          formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully. Our team will contact you shortly.';
+          formStatus.className = "form-status success";
+          customForm.reset();
+        } catch (error) {
+          console.error('Error submitting form:', error);
+          formStatus.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Network error sending message. Please reach us directly on WhatsApp or call +91 90000 35869.';
+          formStatus.className = "form-status error";
+        } finally {
+          setTimeout(() => {
             submitBtn.disabled = false;
-        }, 1000);
-		});
-});
-</script>
-	
+          }, 1200);
+        }
+      });
+    }
+  </script>
 </body>
 </html>

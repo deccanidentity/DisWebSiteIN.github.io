@@ -1,2 +1,1 @@
-# DisHome
-Deccan IDentity Software
+# DisWebSiteCOM.github.io

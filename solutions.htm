@@ -1,276 +1,879 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DeccanIDentity delivers secure enterprise solutions in web & mobile development, AI-powered identity access management, and cybersecurity with 24×7 expert support">
-<meta name="author" content="https://deccanidentity.com/">
-<title>DeccanIDentity-Services</title>
-<link rel="icon" type="image/png" href="images/Logo.png">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<!-- Custom styles for our template -->
-<link rel="stylesheet" href="css/bootstrap-theme.css" media="screen" >
-<link rel="stylesheet" type="text/css" href="css/da-slider.css" />
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/deccan-identity.css">
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Solutions & Services | DeccanIDentity</title>
+  <meta name="description" content="Secure, Scalable & Future-Ready Technology Services in Cyber Security, Identity Access Management (IAM), Web & Mobile Engineering, and 24x7 Support.">
+  <link rel="canonical" href="https://deccanidentity.com/solutions.htm">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/modern.css?v=3.0">
+  <style>
+    .service-timeline-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 2rem;
+      align-items: center;
+      transition: var(--transition);
+    }
+    .service-timeline-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+    .service-timeline-card.reverse {
+      grid-template-columns: 220px 1fr;
+    }
+    .service-timeline-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+    .service-timeline-card h3 {
+      font-size: 1.3rem;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.65rem;
+      text-wrap: balance;
+    }
+    .service-timeline-card p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.68;
+      letter-spacing: -0.008em;
+      text-wrap: pretty;
+    }
+    .why-partner-box {
+      background: #C9E6FA;
+      color: #0f172a;
+      border-radius: var(--radius-xl);
+      padding: 3.5rem 3rem;
+      margin-top: 3.5rem;
+      border: 1px solid #b2d7f5;
+      box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 2px 6px rgba(15, 23, 42, 0.03);
+    }
+    .why-partner-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.25rem;
+    }
+    .why-item {
+      background: #ffffff;
+      border: 1px solid #b2d7f5;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 2rem;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    }
+    .why-item:hover {
+      background: #ffffff;
+      border-color: #93c5fd;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -4px rgba(29, 78, 216, 0.09), 0 2px 6px rgba(15, 23, 42, 0.04);
+    }
+    .why-item h4 {
+      color: #0f172a;
+      margin-bottom: 0.6rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .why-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .why-item p {
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      letter-spacing: -0.008em;
+      text-wrap: pretty;
+      margin-bottom: 0;
+    }
+    @media (max-width: 991px) {
+      .page-hero {
+        padding: 105px 0 45px;
+      }
+      .service-timeline-card {
+        padding: 1.75rem;
+        gap: 1.5rem;
+      }
+    }
+    @media (max-width: 768px) {
+      .service-timeline-card,
+      .service-timeline-card.reverse {
+        grid-template-columns: 1fr;
+      }
+      .service-timeline-card img {
+        height: 190px;
+        order: -1;
+      }
+      .why-partner-grid {
+        grid-template-columns: 1fr;
+        gap: 1.15rem;
+      }
+    }
+    @media (max-width: 640px) {
+      .page-hero {
+        padding: 90px 0 35px;
+      }
+      .service-timeline-card {
+        padding: 1.35rem 1.15rem;
+      }
+      .why-partner-box {
+        padding: 1.75rem 1.25rem;
+        border-radius: var(--radius-lg);
+      }
+      .why-partner-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<img src="images/Logo.png" alt="DeccanIDentity Logo" height="33" width="33"/>
-				<img src="images/logoname.png" alt="DeccanIDentity Logo Text" class="logo-text" height="35"/>
-			</div>
-			<div class="navbar-collapse collapse">
-		      <ul class="nav navbar-nav pull-right">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="ourstory.htm">OurStory</a></li>
-				<li class="active"><a href="solutions.htm">Solutions</a></li>
-				<li><a href="technology.htm">IdentityTech</a></li>
-				<li><a href="skills.htm">SkillsHub</a></li>
-				<li><a href="contact.htm">ContactUs</a></li>
-		      </ul>
-		    </div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
 
-	<header id="head" class="secondary"></header>
-    <div class="container serviceslist">
-      <div class="row">
-      <div class="col-md-12">
-        <header class="page-header">
-					<h1 class="page-title">Solutions</h1>
-					<p>Secure, Scalable & Future-Ready Technology Services</p>
-				</header> 
+  <!-- Reading Scroll Progress Indicator -->
+  <div class="site-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Sticky Enterprise Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-modern nav-container">
+      <a href="index.html" class="brand-wrapper" title="DeccanIDentity - Home">
+        <img src="images/Logo.png" alt="DeccanIDentity Logo" class="brand-logo-img">
+        <img src="images/logoname.png" alt="DeccanIDentity" class="brand-name-img">
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links & Mega Dropdowns -->
+      <nav class="nav-navigation" aria-label="Primary Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-link-item"><a href="index.html">Home</a></li>
+          <li class="nav-link-item"><a href="ourstory.htm">Our Story</a></li>
+          
+          <!-- Solutions Mega Menu (Active) -->
+          <li class="nav-link-item has-dropdown active">
+            <a href="solutions.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown solutions-dropdown" role="region" aria-label="Solutions Overview">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Enterprise Capabilities</span>
+                  <div class="mega-items-grid">
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-shield-halved"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Zero-Trust IAM Engineering</span>
+                        <span class="mega-item-desc">PingFederate, Okta, ForgeRock & CyberArk</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-cloud"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Cloud & AI Web Platforms</span>
+                        <span class="mega-item-desc">High-concurrency microservices & Next.js SaaS</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Mobile Systems</span>
+                        <span class="mega-item-desc">Native iOS, Android & React Native apps</span>
+                      </div>
+                    </a>
+
+                    <a href="solutions.htm" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-robot"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise AI & Automation</span>
+                        <span class="mega-item-desc">Intelligent agents, LLM pipelines & 24/7 SLA</span>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-         </div>       
-      <div class="row">
-        
-         <div class="container solutions-grid">
-			<div class="row g-4">			
-				<div class="col-md-4">
-					<div class="card">
-					<img src="images/service4.png" class="card-img-top" width="100%" alt="">
-					<div class="card-body">
-						<h3>Cyber Security + IAM</h3>
-						<p><strong>Zero Trust. Maximum Protection.</strong></p>
-							<p>We build security frameworks that safeguard assets and ensure seamless operations.</p>
-							<ul>
-								<li>IAM Platforms: PingFederate, Okta, ForgeRock, SailPoint, CyberArk, Azure AD, CA SiteMinder</li>
-								<li>Protocols: SAML 2.0, OAuth 2.0/OIDC, JWT</li>
-								<li>Zero Trust security, MFA, PAM, DevSecOps & compliance</li>
-							</ul>
-					</div>
-					</div>
-				</div>
-						
-        <div class="col-md-4">
-        	<div class="card">
-          	  <img src="images/service2.jpg" class="card-img-top" width="100%" alt="">
-	          <div class="card-body">
-	            <h3>Mobile Development</h3>
-				<p><strong>Native Performance, Cross-Platform Reach</strong></p>
-					<p>Exceptional iOS, Android, and cross-platform apps with Flutter, React Native, Xamarin, and Ionic</p>
-					<ul>
-						<li>Intuitive UI/UX with seamless navigation and accessibility.</li>
-						<li>Enterprise system integration</li>
-						<li>AR/VR experiences, AI-driven personalization</li>
-					</ul>
-			</div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-featured-card">
+                    <div class="featured-badge">
+                      <span class="live-dot-ping"></span> Live Showcases
+                    </div>
+                    <h4 class="featured-title">Interactive Enterprise Demos</h4>
+                    <p class="featured-desc">Explore ready-to-deploy enterprise web portals and native mobile experiences.</p>
+                    <div class="featured-links">
+                      <a href="https://demo.deccanidentity.in/" target="_blank" class="featured-link-pill cyan">
+                        <span><i class="fa-solid fa-laptop-code"></i> Websites (100+)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                      <a href="https://apps.deccanidentity.in/" target="_blank" class="featured-link-pill purple">
+                        <span><i class="fa-solid fa-mobile-screen-button"></i> Mobile Apps</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Identity Tech Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="technology.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Identity Tech</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown tech-dropdown" role="region" aria-label="Identity Technology Pillars">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Architecture Pillars</span>
+                  <div class="mega-items-grid">
+                    <a href="technology.htm#verification" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Continuous Verification</span>
+                        <span class="mega-item-desc">Zero-Trust adaptive posture & context checks</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#access" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-key"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Privileged Access (PAM)</span>
+                        <span class="mega-item-desc">CyberArk, HashiCorp Vault & session audits</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#authentication" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-fingerprint"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">SSO, SAML & OIDC</span>
+                        <span class="mega-item-desc">Federated SSO, Passkeys & adaptive MFA</span>
+                      </div>
+                    </a>
+
+                    <a href="technology.htm#management" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-users-gear"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Automated SCIM & Governance</span>
+                        <span class="mega-item-desc">Identity lifecycle, compliance & audit trails</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-tech-card">
+                    <div class="tech-card-pill">
+                      <i class="fa-solid fa-certificate"></i> Certified Lead
+                    </div>
+                    <h4 class="featured-title">PingFederate & Okta Specialists</h4>
+                    <p class="featured-desc">Certified engineering leads implementing fault-tolerant federated SSO architectures with 99.99% uptime.</p>
+                    <a href="technology.htm" class="tech-cta-link">
+                      Explore Architecture <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Skills Hub Mega Menu -->
+          <li class="nav-link-item has-dropdown">
+            <a href="skills.htm" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Skills Hub</span>
+              <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="mega-dropdown skills-dropdown" role="region" aria-label="Skills & Programs">
+              <div class="mega-dropdown-grid">
+                <div class="mega-col-main">
+                  <span class="mega-group-label">Programs & Bootcamps</span>
+                  <div class="mega-items-grid">
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-blue-subtle">
+                        <i class="fa-solid fa-user-graduate"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Enterprise Live Internship</span>
+                        <span class="mega-item-desc">Hands-on live software delivery & mentoring</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-cyan-subtle">
+                        <i class="fa-solid fa-user-shield"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Cybersecurity & IAM Track</span>
+                        <span class="mega-item-desc">PingFederate, Okta, CyberArk & SailPoint labs</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-purple-subtle">
+                        <i class="fa-solid fa-code"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Fullstack Cloud Engineering</span>
+                        <span class="mega-item-desc">React, Next.js, Node, Java & AWS Microservices</span>
+                      </div>
+                    </a>
+
+                    <a href="skills.htm" class="mega-item">
+                      <div class="mega-icon-box bg-emerald-subtle">
+                        <i class="fa-solid fa-brain"></i>
+                      </div>
+                      <div class="mega-item-text">
+                        <span class="mega-item-title">Applied AI & Machine Learning</span>
+                        <span class="mega-item-desc">LLMs, Agentic AI, PyTorch & Data Pipelines</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-col-featured">
+                  <div class="mega-skills-card">
+                    <div class="featured-badge skills-badge">
+                      <i class="fa-solid fa-bolt"></i> Enrollment Open
+                    </div>
+                    <h4 class="featured-title">Accelerate Your Engineering Career</h4>
+                    <p class="featured-desc">Cohort-based learning with real code reviews, practical repos & certification guidance.</p>
+                    <a href="skills.htm#popup" class="btn-modern btn-modern-primary btn-modern-sm w-100" style="justify-content: center;">
+                      <i class="fa-solid fa-pen-to-square"></i> Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Contact Us -->
+          <li class="nav-link-item"><a href="contact.htm">Contact Us</a></li>
+
+          <!-- Mobile Drawer Actions -->
+          <li class="mobile-drawer-actions">
+            <div class="mobile-drawer-grid">
+              <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm" title="Website Templates & Live Showcases">
+                <i class="fa-solid fa-laptop-code"></i> Websites
+              </a>
+              <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm" title="Mobile & Cloud App Showcases">
+                <i class="fa-solid fa-mobile-screen-button"></i> Apps
+              </a>
+            </div>
+            <a href="https://wa.me/918186035869" target="_blank" class="btn-modern btn-whatsapp btn-modern-sm" style="width: 100%; justify-content: center;">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+91 81860 35869)
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions (Old Style) -->
+      <div class="nav-actions">
+        <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm" title="Website Templates & Live Showcases">
+          <i class="fa-solid fa-laptop-code"></i> Websites
+        </a>
+        <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm" title="Mobile & Cloud App Showcases">
+          <i class="fa-solid fa-mobile-screen-button"></i> Apps
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container-modern">
+      <span class="section-pill">Enterprise Capabilities & Live Showcases</span>
+      <h1 class="hero-title" style="margin-bottom: 0.85rem;">Technology Solutions & Production Platforms</h1>
+      <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 760px; margin: 0 auto 1.75rem;">
+        Delivering resilient cybersecurity, Zero-Trust IAM, full-stack web architectures, and mission-critical mobile platforms engineered for enterprise scale and 24/7 compliance.
+      </p>
+      <div class="page-hero-cta-group">
+        <a href="#ecosystemShowcases" class="btn-modern btn-modern-primary btn-hero-explore">
+          <i class="fa-solid fa-layer-group"></i> Explore Live Showcases
+        </a>
+        <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-hero-websites" title="Website Templates & Live Showcases">
+          <i class="fa-solid fa-laptop-code"></i> Websites
+        </a>
+        <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-hero-apps" title="Mobile & Cloud App Showcases">
+          <i class="fa-solid fa-mobile-screen-button"></i> Apps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core 3 Pillars -->
+  <section class="section-padding" style="padding-top: 50px;">
+    <div class="container-modern">
+      <div class="solutions-grid-modern">
+        <!-- 1: Cyber Security + IAM -->
+        <div class="solution-card-modern">
+          <div class="card-img-wrapper">
+            <img src="images/service4.png" alt="Cyber Security and Identity Access Management">
+            <span class="card-badge">Zero Trust</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Cyber Security + IAM</h3>
+            <p class="card-summary">
+              <strong>Zero Trust. Maximum Protection.</strong> We architect security frameworks that protect digital identities, endpoints, and corporate perimeters.
+            </p>
+            <ul class="card-features-list">
+              <li><i class="fa-solid fa-check"></i> PingFederate, Okta, ForgeRock, CyberArk, SailPoint, Azure AD</li>
+              <li><i class="fa-solid fa-check"></i> Enterprise SAML 2.0, OAuth 2.0 / OIDC, JWT Tokens</li>
+              <li><i class="fa-solid fa-check"></i> MFA, PAM, DevSecOps pipelines & Regulatory Compliance</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="technology.htm" class="btn-modern btn-modern-outline btn-modern-sm" style="width: 100%; justify-content: center;">
+                <i class="fa-solid fa-shield-halved"></i> Identity Tech Stack & Architecture
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2: Mobile Development -->
+        <div class="solution-card-modern">
+          <div class="card-img-wrapper">
+            <img src="images/service2.jpg" alt="Mobile App Development">
+            <span class="card-badge">Cross-Platform Reach</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Mobile Development</h3>
+            <p class="card-summary">
+              <strong>Native Performance & High Adoption.</strong> Delivering seamless iOS and Android applications with Flutter, React Native, and native toolchains.
+            </p>
+            <ul class="card-features-list">
+              <li><i class="fa-solid fa-check"></i> Fluid UI/UX design with accessibility-first standards</li>
+              <li><i class="fa-solid fa-check"></i> Biometric authentication & encrypted local storage</li>
+              <li><i class="fa-solid fa-check"></i> Offline-first database sync & real-time notifications</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-purple btn-modern-sm card-showcase-btn" style="width: 100%; justify-content: center;">
+                <i class="fa-solid fa-mobile-screen-button"></i> Explore Apps <span class="btn-subtext">(apps.deccanidentity.in)</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3: Web Development + AI -->
+        <div class="solution-card-modern">
+          <div class="card-img-wrapper">
+            <img src="images/service1.jpg" alt="Web Development and AI Engineering">
+            <span class="card-badge">Building Tomorrow</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Web Development + AI</h3>
+            <p class="card-summary">
+              <strong>Building Tomorrow's Web Today.</strong> Modern cloud frontends, high-throughput microservices, and conversational AI integrations.
+            </p>
+            <ul class="card-features-list">
+              <li><i class="fa-solid fa-check"></i> Conversational AI (ChatGPT, Gemini, RAG workflows)</li>
+              <li><i class="fa-solid fa-check"></i> Smart analytics & machine-learning-assisted insights</li>
+              <li><i class="fa-solid fa-check"></i> Cloud-native containerization with Docker & Kubernetes</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-cyan btn-modern-sm card-showcase-btn" style="width: 100%; justify-content: center;">
+                <i class="fa-solid fa-laptop-code"></i> Explore Websites <span class="btn-subtext">(demo.deccanidentity.in)</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Production Ecosystem Showcases: Websites & Apps Respective Sections -->
+  <section class="section-padding ecosystem-section" id="ecosystemShowcases">
+    <div class="container-modern">
+      <div class="section-header" style="margin-bottom: 2.75rem;">
+        <span class="section-pill section-pill-blue">Live Production Ecosystems</span>
+        <h2 class="section-title" style="color: #0f172a;">Production Platforms: Websites & Apps</h2>
+        <p class="section-subtitle" style="color: #475569;">
+          Experience live turnkey solutions built by DeccanIDentity. Explore full-featured web templates across 7 industry verticals, native-grade cross-platform mobile apps, and cloud customer engagement engines.
+        </p>
+      </div>
+
+      <!-- Dual Showcase Flagship Grid -->
+      <div class="ecosystem-dual-grid">
+        <!-- Showcase 1: Website Templates & Web Showcases (demo.deccanidentity.in) -->
+        <div class="ecosystem-card card-websites">
+          <div class="hero-badge-pill" style="background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8;">
+            <span class="badge-dot" style="background:#1d4ed8;"></span>
+            <span>Turnkey Website Templates</span>
+          </div>
+
+          <div class="ecosystem-domain-badge">
+            <i class="fa-solid fa-globe"></i> demo.deccanidentity.in
+          </div>
+
+          <h3 class="ecosystem-title">Website Templates & Web Showcases</h3>
+          <p class="ecosystem-desc">
+            Production-ready, highly responsive website templates designed for modern businesses. Preview interactive SVG masterplans, plot filters, EMI estimators, and lead automation before launch.
+          </p>
+
+          <div class="ecosystem-chips">
+            <span class="ecosystem-chip"><i class="fa-solid fa-building"></i> Real Estate Townships</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-hospital"></i> Healthcare & OPD</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-rocket"></i> SaaS & AI Tech</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-cart-shopping"></i> D2C E-Commerce</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-graduation-cap"></i> Education Academies</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-industry"></i> B2B Manufacturing</span>
+          </div>
+
+          <ul class="ecosystem-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> 14+ live interactive templates across 7 industry sectors</li>
+            <li><i class="fa-solid fa-circle-check"></i> Built-in Draggable AI Robot Assistant with instant support</li>
+            <li><i class="fa-solid fa-circle-check"></i> 1-click WhatsApp CRM lead routing & brochure downloads</li>
+            <li><i class="fa-solid fa-circle-check"></i> Engineered with React 18, Vite, and sub-second load times</li>
+          </ul>
+
+          <div class="ecosystem-card-actions">
+            <a href="https://demo.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-primary">
+              <i class="fa-solid fa-laptop-code"></i> Explore Websites <span class="btn-subtext">(demo.deccanidentity.in)</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+            </a>
+            <a href="contact.htm" class="btn-modern btn-neutral-outline">
+              Request Custom Website
+            </a>
+          </div>
+        </div>
+
+        <!-- Showcase 2: App Showcases & Apps (apps.deccanidentity.in) -->
+        <div class="ecosystem-card card-apps">
+          <div class="hero-badge-pill" style="background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8;">
+            <span class="badge-dot" style="background:#1d4ed8;"></span>
+            <span>Mobile & Cloud Applications</span>
+          </div>
+
+          <div class="ecosystem-domain-badge">
+            <i class="fa-solid fa-mobile-screen-button"></i> apps.deccanidentity.in
+          </div>
+
+          <h3 class="ecosystem-title">Mobile & Cloud App Showcases</h3>
+          <p class="ecosystem-desc">
+            Explore native-grade mobile applications and progressive cloud platforms built with Flutter, React Native, and enterprise microservices with zero-trust biometric security.
+          </p>
+
+          <div class="ecosystem-chips">
+            <span class="ecosystem-chip"><i class="fa-brands fa-apple"></i> iOS & Android</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-users-gear"></i> Field Workforce CRM</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-heart-pulse"></i> Telehealth & Care</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-truck-fast"></i> Logistics & Fleet</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-fingerprint"></i> Biometric Auth Apps</span>
+            <span class="ecosystem-chip"><i class="fa-solid fa-cloud"></i> Enterprise PWAs</span>
+          </div>
+
+          <ul class="ecosystem-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> High-performance 60fps Flutter & React Native applications</li>
+            <li><i class="fa-solid fa-circle-check"></i> Biometric authentication, encrypted storage & offline-first sync</li>
+            <li><i class="fa-solid fa-circle-check"></i> Real-time push notification pipelines & WebSocket telemetry</li>
+            <li><i class="fa-solid fa-circle-check"></i> Zero-Trust IAM cloud integration (Okta, PingFederate, Azure)</li>
+          </ul>
+
+          <div class="ecosystem-card-actions">
+            <a href="https://apps.deccanidentity.in/" target="_blank" class="btn-modern btn-modern-primary">
+              <i class="fa-solid fa-mobile-screen-button"></i> Explore Apps <span class="btn-subtext">(apps.deccanidentity.in)</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+            </a>
+            <a href="contact.htm" class="btn-modern btn-neutral-outline">
+              Request Custom App
+            </a>
+          </div>
         </div>
       </div>
 
-	  <div class="col-md-4">
-			<div class="card">
-			<img src="images/service1.jpg" class="card-img-top" width="100%" alt="">
-			<div class="card-body">
-				<h3>Web Development + AI</h3>
-				<p><strong>Building Tomorrow's Web Today</strong></p>
-					<p>Transform your digital presence with scalable web solutions using modern frontends, robust backends, and enterprise databases.</p>
-					<ul>
-						<li>Conversational AI (ChatGPT, Gemini, RAG)</li>
-						<li>Smart Analytics & ML-powered insights</li>
-						<li>Cloud-native deployment with Docker & Kubernetes</li>
-					</ul>
-			</div>
-			</div>
-		</div>
-		
-		</div>
-	</div>
+      <!-- Secondary Ecosystem Cards: WA CRM & IAM -->
+      <div class="ecosystem-bottom-grid">
+        <!-- Card: WhatsApp CRM -->
+        <div class="side-feature-card">
+          <h4>
+            <i class="fa-brands fa-whatsapp" style="color: #16a34a;"></i>
+            WhatsApp Business CRM Platform
+          </h4>
+          <p>
+            Engage clients, automate support, and manage sales pipelines seamlessly with our intelligent WhatsApp CRM platform at <strong>wacrm.deccanidentity.in</strong>.
+          </p>
+          <a href="https://wacrm.deccanidentity.in/" target="_blank" class="btn-modern btn-neutral-outline btn-modern-sm" style="margin-top: auto;">
+            <i class="fa-solid fa-lock"></i> Access WA CRM Portal <span class="btn-subtext">(wacrm.deccanidentity.in)</span>
+          </a>
+        </div>
 
-  <!-- Timeline Section -->
-  <div class="container">
-    <h2 class="text-center my-5">Our End-to-End Services</h2>
-    <ul class="timeline">
-    <!-- Item 1 -->
-    <li class="timeline-item left">
-      <div class="timeline-content text">
-        <h3>👥 Strategic Staffing & Consulting</h3>
-        <p>Expert recruitment for cloud, AI/ML, DevOps, and cybersecurity. Flexible contracts and rapid scaling of skilled teams.</p>
+        <!-- Card: Enterprise IAM Architecture -->
+        <div class="side-feature-card">
+          <h4>
+            <i class="fa-solid fa-shield-halved" style="color: #0284c7;"></i>
+            Zero-Trust Enterprise IAM Architecture
+          </h4>
+          <p>
+            Federated Single Sign-On (SSO), adaptive Multi-Factor Authentication (MFA), and automated identity lifecycle governance powered by PingFederate, Okta & ForgeRock.
+          </p>
+          <a href="technology.htm" class="btn-modern btn-neutral-outline btn-modern-sm" style="margin-top: auto;">
+            <i class="fa-solid fa-network-wired"></i> View IAM Tech Stack & Architecture
+          </a>
+        </div>
       </div>
-      <div class="timeline-content image">
-        <img src="images/timeline/staff.png" alt="Staffing Consulting">
+    </div>
+  </section>
+
+  <!-- End to End Services List -->
+  <section class="section-padding" style="background: #f8fafc;">
+    <div class="container-modern">
+      <div class="section-header">
+        <span class="section-pill">Lifecycle Delivery</span>
+        <h2 class="section-title">End-to-End Enterprise Services</h2>
+        <p class="section-subtitle">
+          Comprehensive project execution from talent acquisition and prototyping to 24/7 ongoing production support.
+        </p>
       </div>
-    </li>
-      <li class="timeline-item right">
-		<div class="timeline-content text">
-        <h3>Product Development</h3>
-        <p>Agile, scalable, and user-focused product development — from concept to launch. Our R&D and QA teams ensure innovation, reliability, and market readiness.</p>
-		</div>
-		<div class="timeline-content image">
-        <img src="images/timeline/product.jpg" alt="Product Development">
+
+      <!-- Item 1 -->
+      <div class="service-timeline-card">
+        <div>
+          <h3 style="margin-bottom: 0.6rem; color: #0f172a;"><i class="fa-solid fa-users" style="color: var(--primary);"></i> Strategic Staffing & Consulting</h3>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
+            Access elite engineers specialized in Cloud, AI/ML, DevOps, and IAM cybersecurity. We offer flexible contract engagement, project augmentation, and rapid scaling of dedicated software development teams.
+          </p>
+        </div>
+        <div>
+          <img src="images/timeline/staff.png" alt="Strategic Staffing and Consulting">
+        </div>
       </div>
-	</li>
-      <li class="timeline-item left">
-		<div class="timeline-content text">
-        <h3>Comprehensive Training</h3>
-        <p>Upskill individuals & teams with customized corporate training in AI, cybersecurity, IAM, and enterprise platforms. Stay ahead with future-ready capabilities.</p>
-		</div>
-		<div class="timeline-content image">
-		<img src="images/timeline/training.jpg" alt="Training">
-	  </div>
-	</li>
-      <li class="timeline-item right">
-		<div class="timeline-content text">
-        <h3>24×7 Support</h3>
-        <p>Round-the-clock support with monitoring, incident response, and ongoing maintenance. Ensuring business continuity with 24x7, 365 days protection.</p>
+
+      <!-- Item 2 -->
+      <div class="service-timeline-card reverse">
+        <div>
+          <img src="images/timeline/product.jpg" alt="Product Development">
+        </div>
+        <div>
+          <h3 style="margin-bottom: 0.6rem; color: #0f172a;"><i class="fa-solid fa-cubes" style="color: var(--accent-cyan);"></i> Agile Product Development</h3>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
+            User-focused product development from ideation to launch. Our dedicated R&D and QA engineering teams ensure reliability, performance testing, security hardening, and market readiness.
+          </p>
+        </div>
       </div>
-      <div class="timeline-content image">
-        <img src="images/timeline/support_24x7_365.jpg" alt="Support">
+
+      <!-- Item 3 -->
+      <div class="service-timeline-card">
+        <div>
+          <h3 style="margin-bottom: 0.6rem; color: #0f172a;"><i class="fa-solid fa-graduation-cap" style="color: var(--accent);"></i> Corporate & Professional Training</h3>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
+            Upskill engineering teams with customized corporate bootcamps covering AI, cybersecurity, IAM tools (Okta, PingFederate), and enterprise Java/Spring platforms. Hands-on labs with industry-recognized certifications.
+          </p>
+        </div>
+        <div>
+          <img src="images/timeline/training.jpg" alt="Comprehensive Training">
+        </div>
       </div>
-    </li>
-    </ul>
+
+      <!-- Item 4 -->
+      <div class="service-timeline-card reverse">
+        <div>
+          <img src="images/timeline/support_24x7_365.jpg" alt="24x7 365 Days Support">
+        </div>
+        <div>
+          <h3 style="margin-bottom: 0.6rem; color: #0f172a;"><i class="fa-solid fa-headset" style="color: var(--accent-emerald);"></i> 24/7 &bull; 365 Mission-Critical Support</h3>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
+            Round-the-clock infrastructure monitoring, rapid incident response, patch management, and ongoing software maintenance to guarantee zero downtime and complete business continuity.
+          </p>
+        </div>
+      </div>
+
+      <!-- Why Partner With Us -->
+      <div class="why-partner-box">
+        <div style="text-align: center; max-width: 620px; margin: 0 auto 2rem;">
+          <span class="section-pill section-pill-blue" style="margin-bottom: 1.25rem;">
+            The DeccanIDentity Advantage
+          </span>
+          <h2 style="color: #0f172a; margin-bottom: 0.75rem; font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 800; letter-spacing: -0.025em;">Why Partner With Us?</h2>
+          <p style="color: #475569; font-size: 0.98rem; line-height: 1.65;">Building long-term strategic relationships grounded in trust, agility, and technical excellence.</p>
+        </div>
+
+        <div class="why-partner-grid">
+          <div class="why-item">
+            <h4><span class="why-icon-box" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;"><i class="fa-solid fa-award"></i></span> Proven Expertise</h4>
+            <p>Battle-tested implementations across enterprise Cloud, IAM protocols, and high-scale web platforms.</p>
+          </div>
+          <div class="why-item">
+            <h4><span class="why-icon-box" style="background: #f0f9ff; color: #0284c7; border: 1px solid #bae6fd;"><i class="fa-solid fa-shield-halved"></i></span> Future-Ready Security</h4>
+            <p>Architected from day one for Zero-Trust compliance, data privacy, and continuous threat mitigation.</p>
+          </div>
+          <div class="why-item">
+            <h4><span class="why-icon-box" style="background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0;"><i class="fa-solid fa-chart-line"></i></span> Measurable Business ROI</h4>
+            <p>Focused on quantifiable outcomes, optimized development cycles, and reduced infrastructure overhead.</p>
+          </div>
+          <div class="why-item">
+            <h4><span class="why-icon-box" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;"><i class="fa-solid fa-handshake"></i></span> Dedicated Partnership</h4>
+            <p>Collaborative engagement model offering transparency, continuous communication, and 24x7 support.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="contact.htm" class="btn-modern btn-modern-primary">
+            Discuss Your Enterprise Project <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container-modern">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="footer-brand-badge">
+            <img src="images/Logo.png" alt="DeccanIDentity Logo" class="footer-brand-logo-img">
+            <img src="images/logoname.png" alt="DeccanIDentity" class="footer-brand-name-img">
+          </div>
+          <p style="color: rgba(255, 255, 255, 0.95); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            DeccanIDentity delivers Zero-Trust IAM, full-stack AI web engineering, and enterprise mobility solutions with 24x7 expert support.
+          </p>
+          <div class="social-links">
+            <a href="https://wa.me/918186035869" target="_blank" class="social-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/deccanidentity" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.fb.com/deccanidentity" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/deccanidentity_india" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/DeccanIdentity" target="_blank" class="social-btn" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@DeccanIdentity" target="_blank" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ourstory.htm">Our Story & About</a></li>
+            <li><a href="solutions.htm">Enterprise Solutions</a></li>
+            <li><a href="technology.htm">Identity Technologies</a></li>
+            <li><a href="skills.htm">Skills Hub & Careers</a></li>
+            <li><a href="https://demo.deccanidentity.in/" target="_blank">Websites (Templates) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
+            <li><a href="https://apps.deccanidentity.in/" target="_blank">Apps (Mobile & Cloud) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
+            <li><a href="contact.htm">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.htm">Zero-Trust IAM Security</a></li>
+            <li><a href="solutions.htm">Okta & PingFederate Solutions</a></li>
+            <li><a href="solutions.htm">AI & Web Development</a></li>
+            <li><a href="solutions.htm">Mobile App Engineering</a></li>
+            <li><a href="skills.htm">Internship Programs</a></li>
+            <li><a href="privacy.htm">Privacy Policy</a></li>
+            <li><a href="termsandcond.htm">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Office Locations</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Registered Office:</strong><br>
+                DeccanIDentity Software Pvt. Ltd.<br>
+                Adibatla, Hyderabad, Telangana, 501510, India
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <a href="tel:+919000035869" style="color: #ffffff;">+91 90000 35869</a> / 
+                <a href="tel:+919494765679" style="color: #ffffff;">+91 94947 65679</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <a href="mailto:hr@deccanidentity.com" style="color: #ffffff;">hr@deccanidentity.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar (Full-Width Dark Teal) -->
+    <div class="footer-bottom">
+      <div class="container-modern">
+        <div class="footer-bottom-flex">
+          <div>
+            &copy; <span id="currentYear" class="current-year">2026</span> <strong>DeccanIDentity Software Pvt. Ltd.</strong> All Rights Reserved.
+          </div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="privacy.htm" style="color: rgba(255, 255, 255, 0.88);">Privacy Policy</a>
+            <a href="termsandcond.htm" style="color: rgba(255, 255, 255, 0.88);">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <a href="https://wa.me/918186035869" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="floating-whatsapp__tooltip"><span class="floating-whatsapp__tooltip-dot" aria-hidden="true"></span> WhatsApp</span>
+    </a>
   </div>
-  <!-- End Timeline Section -->
-   <!-- Why Partner With Us Section -->
-  <div class="container text">
-    <h2>✅ Why Partner With Us?</h2>
-    <p class="mt-3">
-      🏆 Proven Expertise across AI, Cloud, IAM & Cybersecurity <br>
-      🔮 Future-Ready Solutions built for scalability & security <br>
-      🧪 Innovation Leadership through dedicated R&D <br>
-      🎯 Results-Driven with measurable business impact <br>
-      🤝 Partnership Philosophy – long-term relationships, not just projects
-    </p>
-  </div>
-        
-</div>
-</div>
-<footer id="footer" class="top-space">
-		<div class="footer1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-5 panel" style="font-size: 14px">
-						<h4 class="panel-title">Latest News</h4>
-						<div class="panel-body">
-							<ul style="font-size: smaller;">
-								<li>🚀 <strong>New AI Courses</strong> – Launched Gen.AI & OpenAI courses
-									with hands-on projects.</li>
-								<li>🎓 <strong>Internship Program</strong> – Opened internship opportunities in
-									Cybersecurity, AI, and Full Stack Development.</li>
-								<li>🔐 <strong>Identity & Access Management</strong> – Launched new IAM tools & led
-									weekend workshops, boosting adoption & strengthening security.</li>
-								<li>💻 <strong>Java & Spring Workshops</strong> – Conducted Java & Spring Framework
-									workshops, helping developers stay ahead with the latest releases.</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-2 panel" style="font-size: 14px">
-						<h4 class="panel-title">Quick Links</h4>
-						<p><a href="ourstory.htm">Latest Events</a><br>
-							<a href="termsandcond.htm">Terms and conditions</a><br>
-							<a href="privacy.htm">Privacy policy</a><br>
-							<a href="skills.htm">Career</a><br>
-							<a href="contact.htm">Contact us</a>
-						</p>
-					</div>
-					<div class="col-md-3 panel contact" style="font-size: 14px">
-						<h4 class="panel-title"> Contact Info</h4>
-						<div class="panel-body">
-							<!-- <p>Lorem ipsum dolor amet, consectetur adipiscing ipsum dolor.</p> -->
-							<ul>
-								<li><i class="fa fa-phone"></i> +91 90000 35869 &nbsp;<a
-										href="https://wa.me/message/IEJ3MUBFNFSEA1" data-placement="top"
-										title="WhatsApp" target="_blank"><i class="fa_social fa fa-whatsapp"
-											aria-hidden="true" style="font-size:20px;color:white;"></i></li>
-								<li><a href="#"><i class="fa fa-envelope-o"></i> &nbsp;hr@deccanidentity.com</a></li>
-								<li><i class="fa fa-building"></i> Deccan IDentity Software Pvt.Ltd.<br> Hyderabad,
-									Telangana, 501510, India <img src="images/india.png" /></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-2 panel">
-						<h3 class="panel-title">Follow Us</h3>
-						<div class="panel-body">
-							<p class="follow-me-icons">
-								<a href="https://wa.me/message/VYIID6CYVCD7K1" data-placement="top" title="WhatsApp"
-									target="_blank"></a>
-								<i class="fa_social fa fa-whatsapp" aria-hidden="true"></i></a>
-								<!-- style="font-size:36px;color:green" -->
-								<a href="https://www.linkedin.com/in/deccanidentity" data-placement="top"
-									title="Linkedin" target="_blank"><i class="fa_social fa fa-linkedin"></i></a>
-								<a href="https://www.fb.com/deccanidentity" data-placement="top" title="Facebook"
-									target="_blank"><i class="fa_social fa fa-facebook"></i></a>
-								<a href="https://www.instagram.com/deccanidentity_india" data-placement="top"
-									title="Instagram" target="_blank"><i class="fa_social fa fa-instagram"></i></a>
-								<a href="https://x.com/DeccanIdentity" data-placement="top" title="Twitter"
-									target="_blank"><i class="fa_social fa fa-twitter"></i></a>
-								<a href="https://www.youtube.com/@DeccanIdentity" data-placement="top" title="Youtube"
-									target="_blank"><i class="fa_social fa fa-youtube"></i></a>
-								<!--<a href="https://www.pinterest.com/deccanidentity" data-placement="top"
-									title="Pinterest" target="_blank"><i class="fa_social fa fa-pinterest"></i></a>-->
-							</p>
 
-						</div>
-					</div>
-				</div>
-				<!-- /row of panels -->
-			</div>
-		</div>
-		<div class="footer2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 panel">
-						<div class="panel-body">
-							<p class="simplenav"> <a href="index.html">Home</a> | <a href="ourstory.htm">OurStory</a> |
-								<a href="solutions.htm">Solutions</a> | <a href="technology.htm">IdentityTech</a> | <a
-									href="skills.htm">SkillsHub</a>| <a href="contact.htm">ContactUs</a>
-							</p>
-						</div>
-					</div>
-					<div class="col-md-6 panel">
-						<div class="panel-body">
-							<p class="text-right"> Copyright &copy; 2025 All Rights Reserved. By<a
-									href="http://deccanidentity.com/" target="_blank">DeccanIDentity`</a></p>
-						</div>
-					</div>
-				</div>
-				<!-- /row of panels -->
-			</div>
-		</div>
-	</footer>
-
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script src="js/modernizr-latest.js"></script>
-	<script src="js/jquery.cslider.js"></script>
-	<script src="js/headroom.min.js"></script>
-	<script src="js/jquery.headroom.min.js"></script>
-	<script src="js/custom.js"></script>
-
+  <script src="js/modern.js?v=2.9"></script>
 </body>
-
 </html>
